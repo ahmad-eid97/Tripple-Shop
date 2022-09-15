@@ -5,7 +5,7 @@ import Head from 'next/head';
 // STORE STUFF
 import { wrapper } from '../store/store';
 // COMPONENTS
-import MainLayout from '../layouts/mainLayout';
+import MainLayout from '../components/layouts/MainLayout';
 import ThemeContextProvider from '../theme/theme';
 // COOKIES
 import Cookies from 'universal-cookie';

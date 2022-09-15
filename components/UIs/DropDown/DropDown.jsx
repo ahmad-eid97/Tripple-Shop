@@ -42,17 +42,6 @@ const DropDown = ({ menu }) => {
     <div className={cls.dropdown}>
       {openMenu && <div className={cls.overlay} onClick={handleClose}></div>}
 
-        {/* {lang && cookie.get('gridsStoreLang') &&
-        
-          <> */}
-          
-            {/* {lang === 'ar' && cookie.get('gridsStoreLang') === 'ar' && <img src="/imgs/navbar/suadi.png" alt="suadi" onClick={handleClick} />}
-            {lang === 'en' && cookie.get('gridsStoreLang') === 'en' && <img src="/imgs/navbar/america.png" alt="suadi" onClick={handleClick} />} */}
-          
-          {/* </>
-        
-        } */}
-
         {renderFlag()}
 
         <i className="fa-solid fa-caret-down" onClick={handleClick}></i>

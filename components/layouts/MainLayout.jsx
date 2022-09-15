@@ -1,4 +1,5 @@
-import { Navbar, Footer } from "../components";
+import Navbar from './../Navbar/Navbar';
+import Footer from './../Footer/Footer';
 
 const MainLayout = ({ children }) => {
   return (
