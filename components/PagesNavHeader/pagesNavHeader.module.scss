@@ -1,0 +1,29 @@
+@import '../../styles/mixins.scss';
+
+.pagesNavHeader {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  span {
+    background-color: var(--special-background);
+    padding: 7px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--main-color);
+      color: #fff;
+    }
+  }
+  @include xs {
+    gap: 10px;
+    margin-bottom: 20px;
+    span {
+      font-size: 0.8rem;
+      padding: 7px 10px;
+    }
+  }
+}

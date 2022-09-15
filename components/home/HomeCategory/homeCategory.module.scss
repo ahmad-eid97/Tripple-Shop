@@ -1,0 +1,44 @@
+@import '../../../styles/mixins.scss';
+
+.homeCategory {
+  margin: 100px 0;
+
+  .homeCategory__wrapper {
+    background-color: var(--main-color);
+
+    .homeCategory__head {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      button {
+        background-color: var(--secondary-background);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        &:hover {
+          color: #fff;
+          background-color: transparent;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        @include xs {
+          padding: 8px 15px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .homeCategory__products {
+      background-color: var(--secondary-background);
+      margin-left: 200px;
+      @include xs {
+        margin-left: 0;
+      }
+      &.ar {
+        margin-left: unset;
+        margin-right: 200px;
+      }
+    }
+  }
+}

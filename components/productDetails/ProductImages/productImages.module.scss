@@ -1,0 +1,28 @@
+@import '../../../styles/mixins.scss';
+
+.productImages {
+  .productImages__mainImage {
+    height: 450px;
+    margin-bottom: 20px;
+    img {
+      object-fit: contain;
+    }
+    @include xs {
+      height: 300px;
+    }
+  }
+
+  .productImages__allImages {
+    img {
+      height: 70px;
+      object-fit: contain;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 2px solid var(--main-color);
+      }
+      &.active {
+        border-bottom: 2px solid var(--main-color);
+      }
+    }
+  }
+}

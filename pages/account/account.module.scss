@@ -1,0 +1,40 @@
+@import '../../styles/mixins.scss';
+
+.account {
+  .account__wrapper {
+    margin-top: 50px;
+
+    .mobileNav {
+      background-color: var(--secondary-background);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 5px 20px;
+      margin-bottom: 30px;
+      display: none;
+      @include md {
+        display: block;
+      }
+
+      i {
+        width: 40px;
+        height: 40px;
+        background-color: var(--main-color);
+        display: grid;
+        color: #fff;
+        place-items: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border: 1px solid var(--main-color);
+        &:hover {
+          background-color: transparent;
+          color: var(--main-color)
+        }
+      }
+    }
+
+    .sidebar {
+      @include md {
+        display: none;
+      }
+    }
+  }
+}

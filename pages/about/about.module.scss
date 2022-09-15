@@ -1,0 +1,84 @@
+@import '../../styles/mixins';
+
+.about_title {
+  margin-bottom: 50px;
+  padding: 30px 0;
+  text-align: center!important;
+  text-transform: uppercase;
+  color: var(--main-color);
+  background-color: var(--secondary-background);
+  font-weight: bold;
+  border-radius: 5px;
+
+  @include md {
+    font-size: 36px;
+  }
+
+  @include sm {
+    font-size: 30px;
+  }
+
+  @include xs {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+.about {
+  margin: 50px auto 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+
+  div {
+    grid-column: span 4;
+    @include sm {
+      grid-column: span 6;
+    }
+    @include xs {
+      grid-column: span 12;
+    }
+    &.withIcons {
+      grid-row: span 2;
+      margin-bottom: 50px;
+      margin-top: 50px;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+        i {
+          width: 50px;
+          height: 50px;
+          border: none;
+          border-radius: 5px;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 10px;
+          background-color: var(--main-color);
+          color: #fff;
+        }
+      }
+
+      @include sm {
+        grid-column: span 6;
+        grid-row: span 1;
+        grid-row: 3 / 4;
+      }
+      @include xs {
+        grid-column: span 12;
+        grid-row: 5 / 6;
+      }
+    }
+    &.secondLine {
+      margin-top: 50px;
+      @include xs {
+        margin-top: 20px;
+      }
+    }
+  }
+
+}

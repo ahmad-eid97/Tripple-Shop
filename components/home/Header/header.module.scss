@@ -1,0 +1,112 @@
+@import '../../../styles/extends.scss';
+
+.header {
+  .header_wrapper {
+    background-color: var(--special-background);
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .header__slider {
+    * {
+      direction: ltr !important;
+    }
+    .slide {
+      height: 500px;
+      overflow: hidden;
+      .label {
+        color: var(--main-color);
+      }
+      .title {
+        font-size: 4rem;
+        margin-bottom: 20px;
+      }
+      .price {
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+      button {
+        @extend %mainBtn;
+        margin-top: 40px;
+      }
+    }
+    img {
+      height: 500px;
+      object-fit: contain;
+    }
+    @include sm {
+      .slide {
+        height: 500px;
+        overflow: hidden;
+        .label {
+          text-align: center !important;
+        }
+        .title {
+          text-align: center !important;
+        }
+        .price {
+          text-align: center !important;
+        }
+        .btn {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  @include sm {
+
+    .header_wrapper {
+      height: 600px;
+    }
+
+    .header__slider {
+      .slide {
+        height: 600px;
+        overflow: hidden;
+        padding-top: 50px;
+        .label {
+          color: var(--main-color);
+        }
+        .title {
+          font-size: 2.8rem;
+        }
+        .price {
+          font-size: 2.2rem;
+          font-weight: bold;
+        }
+        button {
+          margin-top: 20px;
+        }
+      }
+      img {
+        height: 300px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .announs {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    .announs_box {
+      background-color: var(--special-background);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+      }
+      p {
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: var(--main-color);
+        margin-top: 15px;
+      }
+    }
+  }
+}

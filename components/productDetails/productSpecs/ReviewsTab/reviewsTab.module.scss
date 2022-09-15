@@ -1,0 +1,128 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/extends.scss';
+
+.reviewsTab {
+  .reviewsTab__rating {
+    h3 {
+      font-weight: 500;
+    }
+
+    .overAll {
+      margin: 15px 0;
+      p {
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    } 
+  }
+
+  .reviewsTab__rating_stars {
+    .star {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      
+      span {
+        font-size: 1.2rem;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p.line {
+          width: 200px;
+          height: 10px;
+          border-radius: 10px;
+          background-color: var(--border-color);
+          position: relative;
+          span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+            background-color: var(--main-color);
+          }
+          @include sm {
+            width: 80vw;
+          }
+          @include sm {
+            width: 70vw;
+          }
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+
+      @include md {
+        flex-direction: column;
+        gap: 0px;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .reviewsTab__addReview {
+    h3 {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .reviewsTab__addReview_field {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      span {
+        font-size: 1.5rem;
+      }
+      .label {
+        width: 150px;
+        font-weight: 600;
+      }
+      input, textarea {
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px 20px;
+        border: 1px solid var(--heavy-border);
+        background-color: var(--secondary-background);
+        outline: none;
+      }
+      textarea {
+        height: 120px;
+        padding: 10px 20px;
+        resize: none;
+      }
+
+      @include sm {
+        span {
+          font-size: 1.3rem;
+        }
+      }
+
+      @include xs {
+        flex-direction: column;
+      }
+    }
+
+    .addBtn {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        @extend %mainBtn;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .reviewsTab__reviews {
+    .reviewsTab__reviews_review {
+      &:nth-last-of-type(odd) {
+        background-color: var(--border-color);
+      }
+    }
+  }
+}

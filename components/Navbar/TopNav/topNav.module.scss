@@ -1,0 +1,28 @@
+@import '../../../styles/mixins.scss';
+
+.topNav {
+  background-color: var(--main-color);
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 5px 0px;
+    span {
+      font-size: 0.9rem;
+    }
+    .options {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      span {
+        padding: 0 10px;
+        border-left: 1px solid rgb(224, 224, 224);
+        cursor: pointer;
+      }
+    }
+  }
+  @include md {
+    display: none;
+  }
+}

@@ -1,0 +1,95 @@
+@import '../../styles/mixins';
+
+.faq {
+  padding: 10px 0 120px;
+  @include sm {
+    padding: 50px 0 80px;
+  }
+
+  * {
+    background-color: transparent;
+    border-color: var(--text-color) !important;
+  }
+
+  .faq_title {
+    margin-bottom: 50px;
+    padding: 30px 0;
+    text-align: center!important;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background-color: var(--secondary-background);
+    font-weight: bold;
+    border-radius: 5px;
+
+    @include md {
+      font-size: 36px;
+    }
+
+    @include sm {
+      font-size: 30px;
+    }
+
+    @include xs {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .question {
+    background-color: transparent !important;
+    padding: 15px;
+
+    p {
+      color: var(--text-color);
+      font-size: 20px;
+      margin: 0;
+
+      i {
+        margin-right: 5px;
+        position: relative;
+        top: 1px;
+      }
+  
+      @include xs {
+        font-size: 16px;
+      }
+    }
+  }
+
+  p {
+    color: var(--text-color);
+    font-size: 15px;
+    margin: 0;
+
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+    }
+
+    @include xs {
+      font-size: 14px;
+    }
+  }
+
+  h2 {
+    border-top: 1px solid var(--text-color);
+    margin: 30px 0;
+    padding-top: 50px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: bold;
+
+    @include sm {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    @include xs {
+      font-size: 18px;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}

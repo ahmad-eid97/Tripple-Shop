@@ -1,0 +1,77 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/extends.scss';
+
+.wishlist {
+  .wishlist__header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--heavy-border);
+    span {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .product {
+      grid-column: span 5;
+      padding: 0 10px;
+    }
+    .price, .total {
+      grid-column: span 2;
+      text-align: center !important;
+    }
+    .quantity {
+      grid-column: span 3;
+      text-align: center !important;
+    }
+    .add {
+      grid-column: span 2;
+      text-align: center !important;
+    }
+    @include md {
+      .price, .total, .quantity, .remove {
+        display: none;
+      }
+    }
+  }
+
+  .wishlist__actions {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include md {
+      flex-direction: column;
+      .coupon {
+        margin-bottom: 20px;
+      }
+    }
+
+    .checkout {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      button {
+        padding: 10px 20px;
+        border: 1px solid var(--heavy-border);
+        border-radius: 20px;
+        background-color: transparent;
+        cursor: pointer;
+        &.proceed {
+          @extend %mainBtn;
+        }
+        @include sm {
+          padding: 7px 20px;
+        }
+        @include xs {
+          font-size: 0.9rem;
+          &.proceed {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

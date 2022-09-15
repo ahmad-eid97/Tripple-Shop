@@ -1,0 +1,75 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/extends.scss';
+
+.wishlistItem {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid var(--heavy-border);
+  &:nth-last-of-type(even) {
+    background-color: var(--secondary-background);
+  }
+
+  .product {
+    grid-column: span 5;
+    display: flex;
+    padding: 0 10px;
+    @include md {
+      grid-column: span 12;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    h5 {
+      cursor: pointer;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+  .price {
+    grid-column: span 2;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center !important;
+    span {
+      display: none;
+    }
+    @include md {
+      grid-column: span 2;
+      span {
+        display: inline;
+      }
+    }
+    @include xs {
+      grid-column: span 4;
+    }
+  }
+  .quantityArea {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    @include md {
+      grid-column: span 6;
+    }
+    @include xs {
+      grid-column: span 7;
+    }
+  }
+  .addBtn {
+    grid-column: span 2;
+    margin: 0 20px;
+    padding: 8px 10px;
+    @extend %mainBtn;
+    @include md {
+      grid-column: span 4;
+    }
+    @include xs {
+      grid-column: span 12;
+    }
+  }
+}
