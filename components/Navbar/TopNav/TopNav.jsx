@@ -15,7 +15,7 @@ const TopNav = () => {
         </div>
         <div className={cls.options}>
           <span><i className="fa-light fa-location-dot"></i> Store Locator</span>
-          <span><i className="fa-light fa-truck"></i> Track Your Order</span>
+          <span onClick={() => router.push('/track-order')}><i className="fa-light fa-truck"></i> Track Your Order</span>
           <span><i className="fa-light fa-bag-shopping"></i> Shop</span>
           <span onClick={() => router.push('/account')}><i className="fa-light fa-user"></i> Account</span>
         </div>
