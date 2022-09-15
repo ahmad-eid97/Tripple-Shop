@@ -224,6 +224,7 @@
   .dropdownMenu {
     position: absolute;
     top: 150%;
+    left: -40%;
     margin-top: 5px;
     padding: 10px 0;
     border-radius: 5px;
@@ -257,6 +258,10 @@
     }
     &.show {
       display: block;
+    }
+    &.ar {
+      left: unset;
+      right: -40%;
     }
     @keyframes show {
       0% {

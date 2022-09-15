@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 import Box from "@mui/material/Box";
 
+import { useTranslation } from "next-i18next";
+
 import Cookies from "universal-cookie";
 
 // STYLES FILES
@@ -14,6 +16,7 @@ const cookie = new Cookies();
 const DropDown = ({ menu }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [lang, setLang] = useState(cookie.get('gridsStoreLang'));
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     setLang(cookie.get('gridsStoreLang'))
@@ -54,7 +57,7 @@ const DropDown = ({ menu }) => {
 
         <i className="fa-solid fa-caret-down" onClick={handleClick}></i>
 
-      <Box className={`${cls.dropdownMenu} ${openMenu ? cls.show : ""}`}>
+      <Box className={`${cls.dropdownMenu} ${openMenu ? cls.show : ""} ${cls[i18n.language]}`}>
         <ul>
           {
             menu.map((item) => (

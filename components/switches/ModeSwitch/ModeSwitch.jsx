@@ -10,7 +10,12 @@ const cookie = new Cookies()
 import cls from './modeSwitch.module.scss';
 
 const ModeSwitch = () => {
+  const [hasMounted, setHasMounted] = useState(false);
   const [mode, setMode] = useState(cookie.get('gridsStoreMode') || 'light');
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
 
   useEffect(() => {
     setMode(cookie.get('gridsStoreMode'))
@@ -28,9 +33,12 @@ const ModeSwitch = () => {
     }
   }
 
+  if (!hasMounted) return null;
+
   return (
     <div className={cls.modeSwitch} onClick={switchMode}>
-      {mode === 'light' ? 
+
+      {cookie.get('gridsStoreMode') && cookie.get('gridsStoreMode') === 'light' ?
       
         <i className="fa-light fa-moon"></i>
 

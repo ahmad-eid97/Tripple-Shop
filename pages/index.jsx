@@ -1,4 +1,4 @@
-import { Deals, HomeCategory, Categories, TopProducts } from '../components';
+import { Deals, HomeCategory, FlatHomeCategory, Categories, TopProducts } from '../components';
 import { Header } from './../components';
 
 import langRedirection from '../utils/redirections/langRedirection/langRedirection';
@@ -23,11 +23,11 @@ const Home = () => {
 
       <HomeCategory />
 
-      <HomeCategory />
+      <HomeCategory rounded={true} />
 
       <HomeCategory />
 
-      <HomeCategory />
+      <FlatHomeCategory />
 
       <HomeCategory />
 

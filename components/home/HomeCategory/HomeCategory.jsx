@@ -11,7 +11,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import cls from './homeCategory.module.scss';
 
-const HomeCategory = () => {
+const HomeCategory = ({ rounded }) => {
   const { i18n } = useTranslation();
 
   const breakpoints = {
@@ -38,13 +38,13 @@ const HomeCategory = () => {
   }
 
   return (
-    <div className={cls.homeCategory}>
+    <div className={`${cls.homeCategory} ${rounded ? cls.rounded : ''}`}>
 
       <Container maxWidth="xxl">
 
         <div className={cls.homeCategory__wrapper}>
 
-          <div className={cls.homeCategory__head}>
+          <div className={`${cls.homeCategory__head}`}>
 
             <button>Electronics</button>
 

@@ -542,26 +542,6 @@ button.swal2-cancel {
   }
 }
 
-@include xxl {
-  .container {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-}
-
-@include xl {
-  .container {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-}
-@include sm {
-  .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-}
-
 .swiper-button-prev, .swiper-button-next {
   width: 45px;
   height: 45px;

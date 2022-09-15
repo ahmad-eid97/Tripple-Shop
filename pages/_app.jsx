@@ -49,7 +49,7 @@ class MyApp extends App {
               <Head>
                 <title>Tripple Shop</title>
                 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet"></link>
-                <link rel="shortcut icon" href="./favicon.png" />
+                <link rel="shortcut icon" href="/favicon.png" />
               </Head>
 
               {/* TOASTFY COMPONENT */}
@@ -63,11 +63,11 @@ class MyApp extends App {
                 pauseOnHover
               />
 
-              <MainLayout>
-                <ThemeContextProvider>
-                    <Component {...pageProps} />
-                </ThemeContextProvider>
-              </MainLayout>
+              <ThemeContextProvider>
+                <MainLayout>
+                  <Component {...pageProps} />
+                </MainLayout>
+              </ThemeContextProvider>
             </div>
       );
   }

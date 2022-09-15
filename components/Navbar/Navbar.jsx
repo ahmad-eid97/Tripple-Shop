@@ -9,12 +9,13 @@ import ModeSwitch from "../switches/ModeSwitch/ModeSwitch";
 import MobSidebar from "./MobSidebar/MobSidebar";
 
 import Container from "@mui/material/Container";
+import Tooltip from "@mui/material/Tooltip";
 
 import { useTranslation } from "next-i18next";
 
 import cls from "./navbar.module.scss";
 
-const Navbar = () => {
+const Navbar = ({ rounded }) => {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [navDropdown, setNavDropdown] = useState('');
   const router = useRouter();
@@ -23,7 +24,7 @@ const Navbar = () => {
   return (
     <div className={cls.navbar}>
       <TopNav />
-      <Container maxWidth="xl" className={`${cls.navbar_mainNav} container`}>
+      <Container maxWidth="xxl" className={`${cls.navbar_mainNav}`}>
         <div className={cls.logo}>
           <h1>Tripple Shop</h1>
         </div>
@@ -59,7 +60,7 @@ const Navbar = () => {
               onMouseLeave={() => setNavDropdown('')}
             >
               <Link href="/">
-                  Pages
+                  <span>Pages <i className="fa-light fa-caret-down"></i></span>
               </Link>
 
               {navDropdown === 'pages' && 
@@ -104,7 +105,7 @@ const Navbar = () => {
       </Container>
 
       <div className={cls.navbar__search}>
-        <Container maxWidth="xl" className={`${cls.search__wrapper} container`}>
+        <Container maxWidth="xxl" className={`${cls.search__wrapper}`}>
           <div className={cls.smallLogo}>
             <i
               className="fa-light fa-grid-2"
@@ -119,7 +120,7 @@ const Navbar = () => {
             <ModeSwitch />
           </div>
 
-          <div className={cls.navbar__search__searchArea}>
+          <div className={`${cls.navbar__search__searchArea} ${cls.rounded} ${rounded ? cls.rounded : ''} ${cls[i18n.language]}`}>
             <input type="text" placeholder="Search" />
 
             <button>
@@ -130,15 +131,19 @@ const Navbar = () => {
           <div className={cls.navbar__search__account}>
 
             <div className={cls.account}>
-              <span onClick={() => router.push('/account')}>
-                <i className="fa-light fa-user"></i>
-              </span>
+              <Tooltip title="Compare" placement="top">
+                <span onClick={() => router.push('/compare')}>
+                  <i className="fa-light fa-code-compare"></i>
+                </span>
+              </Tooltip>
             </div>
 
             <div className={cls.wishlist} onMouseEnter={() => setNavDropdown('wishlist')} onMouseLeave={() => setNavDropdown('')}>
-              <span onClick={() => router.push('/wishlist')}>
-                <i className="fa-light fa-heart"></i>
-              </span>
+              <Tooltip title="Wishlist" placement="top">
+                <span onClick={() => router.push('/wishlist')}>
+                  <i className="fa-light fa-heart"></i>
+                </span>
+              </Tooltip>
 
               {navDropdown === 'wishlist' && 
                 <div className={`${cls.wishlist__dropdown} ${cls[i18n.language]}`}>
@@ -185,9 +190,11 @@ const Navbar = () => {
             </div>
 
             <div className={cls.cart} onMouseEnter={() => setNavDropdown('cart')} onMouseLeave={() => setNavDropdown('')}>
-              <span onClick={() => router.push('/cart')}>
-                <i className="fa-light fa-cart-shopping"></i> <span>$0.00</span>
-              </span>
+              <Tooltip title="Cart" placement="top">
+                <span onClick={() => router.push('/cart')}>
+                  <i className="fa-light fa-cart-shopping"></i> <span>$0.00</span>
+                </span>
+              </Tooltip>
 
               {navDropdown === "cart" && 
                 <div className={`${cls.cart__dropdown} ${cls[i18n.language]}`}>

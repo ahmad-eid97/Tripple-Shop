@@ -40,6 +40,22 @@
         text-align: center !important;
         color: #fff;
       }
+      &.rounded {
+        input {
+          border-radius: 20px 0 0 20px;
+        }
+        button {
+          border-radius: 0 20px 20px 0;
+        }
+        &.ar {
+          input {
+            border-radius: 0px 20px 20px 0px;
+          }
+          button {
+            border-radius: 20px 0px 0px 20px;
+          }
+        }
+      }
       @include lg {
         input {
           width: 300px;

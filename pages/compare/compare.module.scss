@@ -1,0 +1,65 @@
+@import '../../styles/extends.scss';
+
+.compare {
+  .products_scroll {
+    overflow-x: scroll;
+  }
+  .products_wrapper {
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    overflow: hidden;
+    min-width: 800px;
+    .product {
+      border: 1px solid var(--heavy-border);
+      max-width: 400px;
+      height: 100%;
+      &.specs {
+        background-color: var(--secondary-background)
+      }
+      .product__head {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid var(--heavy-border);
+        height: 100%;
+        min-height: 350px;
+        max-height: 350px;
+        img {
+          height: 200px;
+          object-fit: contain;
+        }
+        h5 {
+          text-align: center !important;
+        }
+      }
+      .price, .availability, .description, .add, .remove {
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--heavy-border);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        h3, h5 {
+          text-align: center !important;
+        }
+        ul {
+          list-style: circle;
+          padding: 5px 20px;
+        }
+        button {
+          @extend %mainBtn;
+        }
+        i {
+          color: var(--main-color);
+          cursor: pointer;
+        }
+      }
+      .description {
+        height: 200px;
+        overflow-y: scroll;
+      }
+    }
+  }
+}

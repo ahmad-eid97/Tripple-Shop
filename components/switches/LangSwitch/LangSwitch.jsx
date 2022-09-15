@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import { useRouter } from "next/router";
 
 import DropDown from './../../UIs/DropDown/DropDown';
@@ -10,8 +12,13 @@ const cookie = new Cookies();
 import cls from './langSwitch.module.scss'
 
 const LangSwitch = () => {
+  const [hasMounted, setHasMounted] = useState(false);
   const router = useRouter();
   const { t, i18n } = useTranslation('nav');
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
 
   const switchLang = (lang) => {
     i18n.changeLanguage(lang)
@@ -38,6 +45,8 @@ const LangSwitch = () => {
       param: 'ar'
     },
   ];
+
+  if (!hasMounted) return null;
 
   return (
     <div className={cls.lang}>

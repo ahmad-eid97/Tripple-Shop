@@ -22,6 +22,8 @@ export { default as Deals } from './home/Deals/Deals';
 
 export { default as HomeCategory } from './home/HomeCategory/HomeCategory';
 
+export { default as FlatHomeCategory } from './home/FlatHomeCategory/FlatHomeCategory';
+
 export { default as Categories } from './home/Categories/Categories';
 
 export { default as TopProducts } from './home/TopProducts/TopProducts';

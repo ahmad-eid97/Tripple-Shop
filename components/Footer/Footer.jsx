@@ -1,11 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
+import { useTranslation } from "next-i18next";
+
 import cls from "./footer.module.scss";
-import Link from "next/link";
 
 const Footer = () => {
+  const { i18n } = useTranslation('common');
+
   return (
     <div className={cls.footer}>
       <div className={cls.footer__top}>
@@ -16,7 +21,7 @@ const Footer = () => {
               Newsletter ...and receive $20 coupon for first shopping
             </h5>
 
-            <div className={cls.navbar__search__searchArea}>
+            <div className={`${cls.navbar__search__searchArea} ${cls.rounded} ${cls[i18n.language]}`}>
               <input type="text" placeholder="Search" />
 
               <button>
