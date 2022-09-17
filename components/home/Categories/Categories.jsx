@@ -99,7 +99,7 @@ const Categories = () => {
     <div className={cls.categories}>
 
       <Container maxWidth="xxl">
-        <div className={cls.categories__head}>
+        <div className={`${cls.categories__head} ${cls.rounded}`}>
 
           <button>Top Categories In This Week</button>
 

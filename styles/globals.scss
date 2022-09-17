@@ -481,6 +481,9 @@ button.swal2-cancel {
         img {
           animation: showImage 1s ease-in-out;
         }
+        .aboutOffer {
+          animation: showDiv 1s ease-in-out;
+        }
       }
     }
     .control-dots {
@@ -538,6 +541,16 @@ button.swal2-cancel {
   }
   100% {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes showDiv {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
     opacity: 1;
   }
 }

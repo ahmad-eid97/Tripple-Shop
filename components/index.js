@@ -9,18 +9,32 @@ export { default as Footer } from './Footer/Footer';
 
 export { default as ProductBox } from './ProductBox/ProductBox';
 
+export { default as MiniProductBox } from './MiniProductBox/MiniProductBox';
+
 export { default as ProductList } from './ProductList/ProductList';
 
 export { default as PagesNavHeader } from './PagesNavHeader/PagesNavHeader';
 
 export { default as RelatedProducts } from './RelatedProducts/RelatedProducts';
 
+export { default as CountDown } from './CountDown/CountDown';
+
 // HOME COMPONENTS
 export { default as Header } from './home/Header/Header';
 
+export { default as HeaderTwo } from './home/HeaderTwo/HeaderTwo';
+
+export { default as HeaderThree } from './home/HeaderThree/HeaderThree.jsx';
+
 export { default as Deals } from './home/Deals/Deals';
 
+export { default as DealsTwo } from './home/DealsTwo/DealsTwo';
+
 export { default as HomeCategory } from './home/HomeCategory/HomeCategory';
+
+export { default as HomeCategoryTwo } from './home/HomeCategoryTwo/HomeCategoryTwo';
+
+export { default as HomeCategoryThree } from './home/HomeCategoryThree/HomeCategoryThree';
 
 export { default as FlatHomeCategory } from './home/FlatHomeCategory/FlatHomeCategory';
 

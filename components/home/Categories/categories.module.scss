@@ -6,6 +6,9 @@
     justify-content: space-between;
     padding: 10px 20px;
     background-color: var(--main-color);
+    &.rounded {
+      border-radius: 30px;
+    }
     button {
       background-color: var(--secondary-background);
       border: none;

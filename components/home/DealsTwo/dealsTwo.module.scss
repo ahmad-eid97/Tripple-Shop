@@ -1,0 +1,113 @@
+@import '../../../styles/mixins.scss';
+
+.deals {
+  .offerSaving {
+    background-color: var(--secondary-background);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    .offerSaving__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .offerSaving__header__badge {
+        background-color: var(--main-color);
+        width: 80px;
+        height: 80px;
+        border-radius: 20px 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: relative;
+        p {
+          margin: 0;
+        }
+        span {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: -9px;
+          width: 0;
+          height: 0;
+          border-top: 20px solid var(--main-color);
+          border-right: 20px solid transparent;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .offerSaving__product {
+      img {
+        max-width: 400px;
+        max-height: 400px;
+        margin: auto;
+      }
+      h5 {
+        width: 80%;
+        text-align: center !important;
+        margin: 0 auto 20px;
+      }
+      .price {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        h1 {
+
+        }
+        span {
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    .offerSaving__footer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    span {
+      cursor: pointer;
+      font-size: 1.2rem;
+      position: relative;
+      span {
+        display: block;
+        width: 15px;
+        height: 6px;
+        border-radius: 0 0 5px 5px;
+        background-color: var(--text-color);
+        position: absolute;
+        bottom: -8px;
+        left: 40%;
+        display: none;
+      }
+      &.active {
+        font-weight: bold;
+        border-bottom: 3px solid var(--text-color);
+        span {
+          display: block;
+        }
+      }
+    }
+    @include xs {
+      gap: 15px;
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

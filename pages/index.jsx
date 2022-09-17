@@ -1,5 +1,16 @@
-import { Deals, HomeCategory, FlatHomeCategory, Categories, TopProducts } from '../components';
-import { Header } from './../components';
+import { 
+  Header, 
+  HeaderTwo, 
+  HeaderThree, 
+  Deals, 
+  DealsTwo, 
+  HomeCategory, 
+  HomeCategoryTwo,
+  HomeCategoryThree,
+  FlatHomeCategory, 
+  Categories, 
+  TopProducts 
+} from '../components';
 
 import langRedirection from '../utils/redirections/langRedirection/langRedirection';
 import routeRedirection from '../utils/redirections/routeRedirection/routeRedirection';
@@ -17,19 +28,25 @@ const Home = () => {
   return (
     <div className={cls.home}>
 
-      <Header />
+      {/* <Header /> */}
+
+      <HeaderTwo />
+
+      {/* <HeaderThree /> */}
 
       <Deals />
+
+      <DealsTwo />
 
       <HomeCategory />
 
       <HomeCategory rounded={true} />
 
-      <HomeCategory />
+      <HomeCategoryThree />
 
       <FlatHomeCategory />
 
-      <HomeCategory />
+      <HomeCategoryTwo />
 
       <Categories />
 
