@@ -2,6 +2,9 @@
 // NEXT STUFF
 import App from 'next/app';
 import Head from 'next/head';
+import Router from "next/router";
+// COMPONENTS
+import Loader from '../components/UIs/Loader/Loader'
 // STORE STUFF
 import { wrapper } from '../store/store';
 // COMPONENTS
@@ -31,6 +34,10 @@ class MyApp extends App {
 
   });
 
+  state = {
+    showLoader: false
+  }
+
   componentDidMount() {
     if (!cookie.get('gridsStoreMode')) {
       cookie.set('gridsStoreMode', 'light', {path: "/"})
@@ -38,6 +45,18 @@ class MyApp extends App {
     if (!cookie.get('gridsStoreLang')) {
       cookie.set('gridsStoreLang', 'en', {path: "/"})
     }
+
+    Router.events.on('routeChangeStart', () => {
+      this.setState({
+        showLoader: true
+      })
+    })
+
+    Router.events.on('routeChangeComplete', () => {
+      this.setState({
+        showLoader: false
+      })
+    })
   }
 
   render() {
@@ -62,6 +81,8 @@ class MyApp extends App {
                 rtl={locale === "ar" ? true : false}
                 pauseOnHover
               />
+
+              {this.state.showLoader && <Loader />}
 
               <ThemeContextProvider>
                 <MainLayout>
