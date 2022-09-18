@@ -9,20 +9,20 @@ import cls from './productList.module.scss';
 
 const ProductList = () => {
   const router = useRouter();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <section className={cls.productList}>
 
       <div className={`${cls.newBadge} ${cls[i18n.language]}`}>
 
-        <span><i className="fa-regular fa-stars"></i> New</span>
+        <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
 
       </div>
 
       <div className={`${cls.saleBadge} ${cls[i18n.language]}`}>
 
-        <span>Off</span>
+        <span>{t('product.off')}</span>
 
         <p>10%</p>
 
@@ -61,13 +61,13 @@ const ProductList = () => {
 
         </div>
 
-        <button className={cls.addBtn}>Add to cart</button>
+        <button className={cls.addBtn}>{t('product.addCart')}</button>
 
         <div className={cls.productList__actions_extra}>
 
-          <button><i className="fa-light fa-heart"></i> Wishlist</button>
+          <button><i className="fa-light fa-heart"></i> {t('product.wishlist')}</button>
 
-          <button><i className="fa-light fa-code-compare"></i> Compare</button>
+          <button><i className="fa-light fa-code-compare"></i> {t('product.compare')}</button>
 
         </div>
 

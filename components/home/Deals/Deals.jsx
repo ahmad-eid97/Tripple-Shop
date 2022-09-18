@@ -6,10 +6,13 @@ import BestSelling from './BestSelling/BestSelling';
 
 import Container from "@mui/material/Container";
 
+import { useTranslation } from "next-i18next";
+
 import cls from './deals.module.scss';
 
 const Deals = () => {
   const [activeTab, setActiveTab] = useState('today')
+  const { t, i18n } = useTranslation('common')
 
   const renderView = () => {
     switch(activeTab) {
@@ -29,11 +32,11 @@ const Deals = () => {
 
         <div className={cls.tabs}>
 
-          <span className={activeTab === 'today' ? cls.active : ''} onClick={() => setActiveTab('today')}><span></span>Todays Deals</span>
+          <span className={activeTab === 'today' ? cls.active : ''} onClick={() => setActiveTab('today')}><span></span>{t('deals.today')}</span>
 
-          <span className={activeTab === 'featured' ? cls.active : ''} onClick={() => setActiveTab('featured')}><span></span>Featured Products</span>
+          <span className={activeTab === 'featured' ? cls.active : ''} onClick={() => setActiveTab('featured')}><span></span>{t('deals.featured')}</span>
 
-          <span className={activeTab === 'best' ? cls.active : ''} onClick={() => setActiveTab('best')}><span></span>Best Selling</span>
+          <span className={activeTab === 'best' ? cls.active : ''} onClick={() => setActiveTab('best')}><span></span>{t('deals.best')}</span>
 
         </div>
 

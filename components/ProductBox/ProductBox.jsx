@@ -17,13 +17,13 @@ const ProductBox = () => {
 
       <div className={`${cls.newBadge} ${cls[i18n.language]}`}>
 
-        <span><i className="fa-regular fa-stars"></i> New</span>
+        <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
 
       </div>
 
       <div className={`${cls.saleBadge} ${cls[i18n.language]}`}>
 
-        <span>Off</span>
+        <span>{t('product.off')}</span>
 
         <p>10%</p>
 
@@ -40,7 +40,7 @@ const ProductBox = () => {
         <p>$350</p>
 
         
-        <Tooltip title="Add To Cart" placement="top">
+        <Tooltip title={t('product.addCart')} placement="top">
           <i className="fa-regular fa-cart-plus"></i>
         </Tooltip>
 
@@ -54,7 +54,7 @@ const ProductBox = () => {
 
       <div className={cls.points}>
 
-        <span>Points</span>
+        <span>{t('product.points')}</span>
 
         <span>0</span>
 
@@ -62,9 +62,9 @@ const ProductBox = () => {
 
       <div className={cls.quantity}>
 
-        <span>Quantity: <span>200</span></span>
+        <span>{t('product.quantity')}: <span>200</span></span>
 
-        <span>Solid quantity: <span>0</span></span>
+        <span>{t('product.sold')}: <span>0</span></span>
 
       </div>
 
@@ -72,9 +72,9 @@ const ProductBox = () => {
 
       <div className={cls.actions}>
 
-        <button><i className="fa-light fa-code-compare"></i> Compare</button>
+        <button><i className="fa-light fa-code-compare"></i> {t('product.compare')}</button>
 
-        <button><i className="fa-light fa-heart"></i> Wishlist</button>
+        <button><i className="fa-light fa-heart"></i> {t('product.wishlist')}</button>
 
       </div>
 

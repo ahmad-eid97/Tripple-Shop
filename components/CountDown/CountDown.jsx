@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 
 import { useTimer } from "react-timer-hook";
 
+import { useTranslation } from "next-i18next";
+
 import cls from "./countDown.module.scss";
 
 const CountDown = ({ daysCount }) => {
-  // const [Days, setDays] = useState(days);
-  // const [hours, setHours] = useState(23);
-  // const [minutes, setMinutes] = useState(60);
-  // const [seconds, setSeconds] = useState(60);
+  const { t, i18n } = useTranslation('common');
 
   const expiryTimestamp = new Date();
   expiryTimestamp.setSeconds(
@@ -32,7 +31,7 @@ const CountDown = ({ daysCount }) => {
   return (
     <div className={cls.countDown}>
 
-      <h6>Hurry Up! Offer ends in:</h6>
+      <h6>{t('deals.hurry')}</h6>
 
       <div className={cls.countDown__parts}>
         {days >= 1 && (
@@ -40,7 +39,7 @@ const CountDown = ({ daysCount }) => {
             <div className={cls.part}>
               <div className={cls.number}>{days}</div>
 
-              <h5>Days</h5>
+              <h5>{t('deals.days')}</h5>
             </div>
 
             <span>:</span>
@@ -50,7 +49,7 @@ const CountDown = ({ daysCount }) => {
         <div className={cls.part}>
           <div className={cls.number}>{hours}</div>
 
-          <h5>Hours</h5>
+          <h5>{t('deals.hours')}</h5>
         </div>
 
         <span>:</span>
@@ -58,7 +57,7 @@ const CountDown = ({ daysCount }) => {
         <div className={cls.part}>
           <div className={cls.number}>{minutes}</div>
 
-          <h5>Minutes</h5>
+          <h5>{t('deals.minutes')}</h5>
         </div>
 
         <span>:</span>
@@ -66,7 +65,7 @@ const CountDown = ({ daysCount }) => {
         <div className={cls.part}>
           <div className={cls.number}>{seconds}</div>
 
-          <h5>Seconds</h5>
+          <h5>{t('deals.seconds')}</h5>
         </div>
         
       </div>

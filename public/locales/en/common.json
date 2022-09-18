@@ -1,3 +1,21 @@
 {
-  "welcome": "Welcome to grids ecommerce store"
+  "deals.today": "Todays Deals",
+  "deals.featured": "Featured Products",
+  "deals.best": "Best Selling",
+  "deals.special": "Special Offer",
+  "deals.hurry": "Hurry Up! Offer ends in:",
+  "deals.save": "Save",
+  "deals.days": "Days",
+  "deals.hours": "Hours",
+  "deals.minutes": "Minutes",
+  "deals.seconds": "Seconds",
+
+  "product.points": "Points",
+  "product.addCart": "Add to cart",
+  "product.sold": "Sold Quantity",
+  "product.quantity": "Quantity",
+  "product.compare": "Compare",
+  "product.wishlist": "Wishlist",
+  "product.new": "New",
+  "product.off": "Off"
 }

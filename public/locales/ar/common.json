@@ -1,3 +1,21 @@
 {
-  "welcome": "مرحبا بك في موقع جريدز للتجارة الالكترونية"
+  "deals.today": "عروض اليوم",
+  "deals.featured": "المنتجات المميزة",
+  "deals.best": "الأكثر مبيعاَ",
+  "deals.special": "عرض مميز",
+  "deals.hurry": "أسرع! العرض ينتهي في:",
+  "deals.save": "وفر",
+  "deals.days": "أيام",
+  "deals.hours": "ساعات",
+  "deals.minutes": "دقائق",
+  "deals.seconds": "ثواني",
+
+  "product.points": "النقاط",
+  "product.addCart": "إضافة الي العربة",
+  "product.sold": "الكمية المباعة",
+  "product.quantity": "الكمية",
+  "product.compare": "مقارنة",
+  "product.wishlist": "قائمة الأمنيات",
+  "product.new": "جديد",
+  "product.off": "خصم"
 }

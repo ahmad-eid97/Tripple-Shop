@@ -9,10 +9,13 @@ import CountDown from './../../CountDown/CountDown';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
+import { useTranslation } from "next-i18next";
+
 import cls from './dealsTwo.module.scss';
 
 const DealsTwo = () => {
-  const [activeTab, setActiveTab] = useState('today')
+  const [activeTab, setActiveTab] = useState('today');
+  const { t, i18n } = useTranslation('common');
 
   const renderView = () => {
     switch(activeTab) {
@@ -38,11 +41,11 @@ const DealsTwo = () => {
 
               <div className={cls.offerSaving__header}>
 
-                <h3>Special Offer</h3>
+                <h3>{t('deals.special')}</h3>
 
                 <div className={cls.offerSaving__header__badge}>
 
-                  <p>Save</p>
+                  <p>{t('deals.save')}</p>
 
                   <span>$20.00</span>
 
@@ -80,11 +83,11 @@ const DealsTwo = () => {
 
             <div className={cls.tabs}>
 
-              <span className={activeTab === 'today' ? cls.active : ''} onClick={() => setActiveTab('today')}><span></span>Todays Deals</span>
+              <span className={activeTab === 'today' ? cls.active : ''} onClick={() => setActiveTab('today')}><span></span>{t('deals.today')}</span>
 
-              <span className={activeTab === 'featured' ? cls.active : ''} onClick={() => setActiveTab('featured')}><span></span>Featured Products</span>
+              <span className={activeTab === 'featured' ? cls.active : ''} onClick={() => setActiveTab('featured')}><span></span>{t('deals.featured')}</span>
 
-              <span className={activeTab === 'best' ? cls.active : ''} onClick={() => setActiveTab('best')}><span></span>Best Selling</span>
+              <span className={activeTab === 'best' ? cls.active : ''} onClick={() => setActiveTab('best')}><span></span>{t('deals.best')}</span>
 
             </div>
 
