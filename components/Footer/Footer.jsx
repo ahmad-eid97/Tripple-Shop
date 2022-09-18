@@ -9,7 +9,7 @@ import { useTranslation } from "next-i18next";
 import cls from "./footer.module.scss";
 
 const Footer = () => {
-  const { i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
 
   return (
     <div className={cls.footer}>
@@ -17,12 +17,11 @@ const Footer = () => {
         <Container maxWidth="xl">
           <div className={cls.footer__top_wrapper}>
             <h5>
-              <i className="fa-light fa-paper-plane-top"></i> Sign up to
-              Newsletter ...and receive $20 coupon for first shopping
+              <i className="fa-light fa-paper-plane-top"></i> {t('footer.signin')}
             </h5>
 
             <div className={`${cls.navbar__search__searchArea} ${cls.rounded} ${cls[i18n.language]}`}>
-              <input type="text" placeholder="Search" />
+              <input type="text" placeholder={t('footer.search')} />
 
               <button>
                 <i className="fa-light fa-magnifying-glass"></i>
@@ -37,19 +36,19 @@ const Footer = () => {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} md={4}>
               <div className={cls.logoArea}>
-                <h1>Tripple Shop</h1>
+                <h1>{t('footer.logo')}</h1>
 
                 <div className={cls.support}>
                   <i className="fa-thin fa-hands-holding-heart"></i>
 
                   <div>
-                    <h6>Support: 01025864313</h6>
-                    <span>Email: info@tripple.com</span>
+                    <h6>{t('footer.support')}: 01025864313</h6>
+                    <span>{t('footer.email')}: info@tripple.com</span>
                   </div>
                 </div>
 
                 <div>
-                  <h6>Contact Info</h6>
+                  <h6>{t('footer.contact')}</h6>
                   <p>17 Princess Road, London, Greater London NW1 8JR, UK</p>
                 </div>
 
@@ -64,7 +63,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={12} sm={6} md={3}>
-              <h4>Find It Fast</h4>
+              <h4>{t('footer.find')}</h4>
               <ul>
                 <li>Laptops & Computers</li>
                 <li>Cameras & Photography</li>
@@ -98,7 +97,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={12} sm={6} md={2}>
-              <h4>Customer Care</h4>
+              <h4>{t('footer.care')}</h4>
               <ul>
                 <li>My Account</li>
                 <li>Track your Order</li>
@@ -114,7 +113,7 @@ const Footer = () => {
 
       <div className={cls.footer__bottom}>
         <Container maxWidth="xl" className={cls.footer__bottom_wrapper}>
-          <span>© Tripple shop - All Rights Reserved</span>
+          <span>{t('footer.rights')}</span>
 
           <img
             src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/patment-icon1.png"

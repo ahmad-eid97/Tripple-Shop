@@ -19,14 +19,14 @@ const Navbar = ({ rounded }) => {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [navDropdown, setNavDropdown] = useState('');
   const router = useRouter();
-  const { i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation('nav');
 
   return (
     <div className={cls.navbar}>
       <TopNav />
       <Container maxWidth="xxl" className={`${cls.navbar_mainNav}`}>
         <div className={cls.logo}>
-          <h1>Tripple Shop</h1>
+          <h1 onClick={() => router.push('/')}>{t('nav.logo')}</h1>
         </div>
 
         <div className={cls.links}>
@@ -34,7 +34,7 @@ const Navbar = ({ rounded }) => {
 
             <li className={`${router.pathname == "/" ? cls.active : ""}`}>
               <Link href="/" exact>
-                Home
+                {t('nav.home')}
               </Link>
             </li>
 
@@ -42,7 +42,7 @@ const Navbar = ({ rounded }) => {
               className={`${router.pathname == "/about" ? cls.active : ""}`}
             >
               <Link href="/about">
-                  About Us
+                {t('nav.about')}
               </Link>
             </li>
 
@@ -50,7 +50,7 @@ const Navbar = ({ rounded }) => {
               className={`${router.pathname == "/blogs" ? cls.active : ""}`}
             >
               <Link href="/">
-                  Blogs
+                {t('nav.blogs')}
               </Link>
             </li>
 
@@ -60,7 +60,7 @@ const Navbar = ({ rounded }) => {
               onMouseLeave={() => setNavDropdown('')}
             >
               <Link href="/">
-                  <span>Pages <i className="fa-light fa-caret-down"></i></span>
+                  <span> {t('nav.pages')} <i className="fa-light fa-caret-down"></i></span>
               </Link>
 
               {navDropdown === 'pages' && 
@@ -79,7 +79,7 @@ const Navbar = ({ rounded }) => {
               }`}
             >
                 <Link href="/policy">
-                Policy
+                  {t('nav.policy')}
                 </Link>
             </li>
 
@@ -87,7 +87,7 @@ const Navbar = ({ rounded }) => {
               className={`${router.pathname == "/contact" ? cls.active : ""}`}
             >
               <Link href="/contact">
-                  Contact Us
+                {t('nav.contact')}
               </Link>
             </li>
             
@@ -98,8 +98,8 @@ const Navbar = ({ rounded }) => {
           <i className="fa-thin fa-hands-holding-heart"></i>
 
           <div>
-            <h6>Support: 01025864313</h6>
-            <span>Email: info@tripple.com</span>
+            <h6>{t('nav.support')}: 01025864313</h6>
+            <span>{t('nav.email')}: info@tripple.com</span>
           </div>
         </div>
       </Container>
@@ -121,7 +121,7 @@ const Navbar = ({ rounded }) => {
           </div>
 
           <div className={`${cls.navbar__search__searchArea} ${cls.rounded} ${rounded ? cls.rounded : ''} ${cls[i18n.language]}`}>
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder={t('nav.search')} />
 
             <button>
               <i className="fa-light fa-magnifying-glass"></i>
@@ -131,7 +131,7 @@ const Navbar = ({ rounded }) => {
           <div className={cls.navbar__search__account}>
 
             <div className={cls.account}>
-              <Tooltip title="Compare" placement="top">
+              <Tooltip title={t('nav.compare')} placement="top">
                 <span onClick={() => router.push('/compare')}>
                   <i className="fa-light fa-code-compare"></i>
                 </span>
@@ -139,7 +139,7 @@ const Navbar = ({ rounded }) => {
             </div>
 
             <div className={cls.wishlist} onMouseEnter={() => setNavDropdown('wishlist')} onMouseLeave={() => setNavDropdown('')}>
-              <Tooltip title="Wishlist" placement="top">
+              <Tooltip title={t('nav.wishlist')} placement="top">
                 <span onClick={() => router.push('/wishlist')}>
                   <i className="fa-light fa-heart"></i>
                 </span>
@@ -174,7 +174,7 @@ const Navbar = ({ rounded }) => {
 
                   <div className='smallEmpty'>
                     <img src="/imgs/empty/wishlist.png" alt="emptyImage" />
-                    <h6>You have no returns yet!</h6>
+                    <h6>No products in wishlist yet!</h6>
                   </div>
 
                   <div className={cls.actions}>
@@ -190,7 +190,7 @@ const Navbar = ({ rounded }) => {
             </div>
 
             <div className={cls.cart} onMouseEnter={() => setNavDropdown('cart')} onMouseLeave={() => setNavDropdown('')}>
-              <Tooltip title="Cart" placement="top">
+              <Tooltip title={t('nav.cart')} placement="top">
                 <span onClick={() => router.push('/cart')}>
                   <i className="fa-light fa-cart-shopping"></i> <span>$0.00</span>
                 </span>
@@ -213,7 +213,7 @@ const Navbar = ({ rounded }) => {
 
                   <div className='smallEmpty'>
                     <img src="/imgs/empty/cart.png" alt="emptyImage" />
-                    <h6>You have no returns yet!</h6>
+                    <h6>No products in cart yet!</h6>
                   </div>
 
                   <div className={cls.actions}>

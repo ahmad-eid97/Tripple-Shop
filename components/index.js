@@ -5,6 +5,8 @@ export { default as LangSwitch } from './switches/LangSwitch/LangSwitch';
 
 export { default as Navbar } from './Navbar/Navbar';
 
+export { default as NavbarTwo } from './Navbar/NavbarTwo';
+
 export { default as Footer } from './Footer/Footer';
 
 export { default as ProductBox } from './ProductBox/ProductBox';
@@ -25,6 +27,10 @@ export { default as Header } from './home/Header/Header';
 export { default as HeaderTwo } from './home/HeaderTwo/HeaderTwo';
 
 export { default as HeaderThree } from './home/HeaderThree/HeaderThree.jsx';
+
+export { default as HeaderFour } from './home/HeaderFour/HeaderFour';
+
+export { default as HeaderFive } from './home/HeaderFive/HeaderFive';
 
 export { default as Deals } from './home/Deals/Deals';
 

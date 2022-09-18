@@ -1,7 +1,5 @@
 import Container from "@mui/material/Container";
 
-import CountDown from './../../components/CountDown/CountDown';
-
 import langRedirection from "../../utils/redirections/langRedirection/langRedirection";
 import routeRedirection from "../../utils/redirections/routeRedirection/routeRedirection";
 
@@ -80,7 +78,6 @@ const About = () => {
           </p>
         </div>
 
-        <CountDown daysCount={30} />
       </Container>
     </div>
   );

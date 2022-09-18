@@ -80,6 +80,9 @@ const ThemeContextProvider = ({ children }) => {
         }
       },
     },
+    typography: {
+      fontFamily: "Cairo, sans-serif"
+    }
   })
 
   return (

@@ -58,37 +58,37 @@ const MobileMenu = ({ isOpen, closeMobileMenu }) => {
             <Link href="/" passHref>
               <li onClick={close} className={`${router.pathname == "/" ? cls.active : ""}`}>
                 <i className={`fa-light fa-star ${cls[i18n.language]}`}></i>
-                Home
+                {t('nav.home')}
               </li>
             </Link>
             <Link href="/about" passHref>
               <li onClick={close} className={`${router.pathname == "/about" ? cls.active : ""}`}>
                 <i className={`fa-light fa-star ${cls[i18n.language]}`}></i>
-                About Us
+                {t('nav.about')}
               </li>
             </Link>
             <Link href="/blogs" passHref>
               <li onClick={close} className={`${router.pathname == "/blogs" ? cls.active : ""}`}> 
                 <i className={`fa-light fa-star ${cls[i18n.language]}`}></i>
-                Blogs
+                {t('nav.blogs')}
               </li>
             </Link>
             <Link href="/pages" passHref>
               <li onClick={close} className={`${router.pathname == "/pages" ? cls.active : ""}`}>
                 <i className={`fa-light fa-star ${cls[i18n.language]}`}></i>
-                Pages
+                {t('nav.pages')}
               </li>
             </Link>
             <Link href="/policy" passHref>
               <li onClick={close} className={`${router.pathname == "/policy" ? cls.active : ""}`}>
                 <i className={`fa-light fa-star ${cls[i18n.language]}`}></i>
-                Policy
+                {t('nav.policy')}
               </li>
             </Link>
             <Link href="/contact" passHref>
               <li onClick={close} className={`${router.pathname == "/contact" ? cls.active : ""}`}>
                 <i className={`fa-light fa-star ${cls[i18n.language]}`}></i>
-                Contact Us
+                {t('nav.contact')}
               </li>
             </Link>
           </ul>

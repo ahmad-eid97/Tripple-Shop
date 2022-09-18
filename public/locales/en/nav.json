@@ -1,4 +1,36 @@
 {
+  "nav.home": "Home",
+  "nav.about": "About Us",
+  "nav.blogs": "Blogs",
+  "nav.pages": "Pages",
+  "nav.policy": "Policy",
+  "nav.contact": "Contact",
+  
   "nav.english": "English",
-  "nav.arabic": "Arabic"
+  "nav.arabic": "Arabic",
+
+  "nav.welcome": "Welcome to Tripple Shop E-commerce Store",
+  "nav.store": "Store Locator",
+  "nav.track": "Track Your Order",
+  "nav.shop": "Shop",
+  "nav.account": "Account",
+
+  "nav.logo": "Tripple Shop",
+  "nav.email": "Email",
+  "nav.support": "Support",
+
+  "nav.search": "Search",
+  "nav.compare": "Compare",
+  "nav.wishlist": "Wishlist",
+  "nav.cart": "Cart",
+
+  "footer.logo": "Tripple Shop",
+  "footer.email": "Email",
+  "footer.support": "Support",
+  "footer.contact": "Contact Info",
+  "footer.find": "Find It Fast",
+  "footer.care": "Customer Care",
+  "footer.rights": "© Tripple shop - All Rights Reserved",
+  "footer.search": "Search",
+  "footer.signin": "Sign up to Newsletter ...and receive $20 coupon for first shopping"
 }

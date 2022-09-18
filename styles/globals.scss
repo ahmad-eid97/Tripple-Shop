@@ -1,6 +1,6 @@
 @import "./mixins.scss";
 @import "./variables.scss";
-
+@import './node_modules/tabs-slider/src/scss/tabs.scss';
 // @font-face {
 //   font-family: IBMPlexSansArabic;
 //   src: url("../../public/fonts/IBMPlexSansArabic-Regular.ttf");
@@ -483,6 +483,12 @@ button.swal2-cancel {
         }
         .aboutOffer {
           animation: showDiv 1s ease-in-out;
+          p {
+            animation: showDiv 1s ease-in-out;
+          }
+          h5 {
+            animation: unset;
+          }
         }
       }
     }
@@ -499,6 +505,34 @@ button.swal2-cancel {
           width: 30px;
           border-radius: 5px;
         }
+      }
+    }
+  }
+}
+.header__slider {
+  .slide {
+    h5 {
+      animation: showLabel 1s ease-in-out;
+    }
+    h1 {
+      animation: showTitle 1s ease-in-out;
+    }
+    p {
+      animation: showTitle 1s ease-in-out;
+    }
+    button {
+      animation: showButton 1s ease-in-out;
+    }
+    img {
+      animation: showImage 1s ease-in-out;
+    }
+    .aboutOffer {
+      animation: showDiv 1s ease-in-out;
+      p {
+        animation: showDiv 1s ease-in-out;
+      }
+      h5 {
+        animation: unset;
       }
     }
   }

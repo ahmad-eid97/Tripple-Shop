@@ -1,4 +1,36 @@
 {
-  "nav.english": "الإنجليزية",
-  "nav.arabic": "العربية"
+  "nav.home": "الصفحه الرئيسية",
+  "nav.about": "من نحن؟",
+  "nav.blogs": "المقالات",
+  "nav.pages": "الصفحات",
+  "nav.policy": "سياسات الموقع",
+  "nav.contact": "تواصل معنا",
+  
+  "nav.english": "الانجليزية",
+  "nav.arabic": "العربية",
+
+  "nav.welcome": "أهلاَ بك في موقعنا للتجاره الإلكتروني",
+  "nav.store": "فروعنا",
+  "nav.track": "تتبع شحنتك",
+  "nav.shop": "تسوق",
+  "nav.account": "بيانات الحساب",
+
+  "nav.logo": "تريبل شوب",
+  "nav.email": "البريد الإلكتروني",
+  "nav.support": "الدعم الفني",
+
+  "nav.search": "البحث",
+  "nav.compare": "المقارنة",
+  "nav.wishlist": "قائمة الأمنيات",
+  "nav.cart": "عربة التسوق",
+
+  "footer.logo": "تريبل شوب",
+  "footer.email": "البريد الإلكتروني",
+  "footer.support": "الدعم الفني",
+  "footer.contact": "معلومات التواصل",
+  "footer.find": "سرعة الوصول",
+  "footer.care": "خدمة العملاء",
+  "footer.rights": "© تريبل شوب . كل الحقوق محفوظة",
+  "footer.search": "بحث",
+  "footer.signin": "اشترك في النشرة الإخبارية ... واحصل على قسيمة بقيمة 20 دولارًا للتسوق لأول مرة"
 }
