@@ -5,6 +5,7 @@
   "nav.pages": "Pages",
   "nav.policy": "Policy",
   "nav.contact": "Contact",
+  "nav.faq": "FAQ",
   
   "nav.english": "English",
   "nav.arabic": "Arabic",
@@ -23,6 +24,12 @@
   "nav.compare": "Compare",
   "nav.wishlist": "Wishlist",
   "nav.cart": "Cart",
+  "nav.viewCart": "View Cart",
+  "nav.clearCart": "Clear Cart",
+  "nav.emptyCart": "No products in cart yet!",
+  "nav.viewWishlist": "View Wishlist",
+  "nav.clearWishlist": "Clear Wishlist",
+  "nav.emptyWishlist": "No products in wishlist yet!",
 
   "footer.logo": "Tripple Shop",
   "footer.email": "Email",

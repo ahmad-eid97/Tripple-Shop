@@ -14,24 +14,24 @@ import { useTranslation } from 'next-i18next';
 import cls from './wishlist.module.scss';
 
 const Wishlist = () => {
-  const { i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
 
   return (
     <div className={cls.wishlist}>
 
       <Container maxWidth="xxl">
 
-        <PagesNavHeader steps={["Wishlist"]} />
+        <PagesNavHeader steps={[`${t('wishlist.wishlist')}`]} />
 
         <div className={cls.wishlist__header}>
 
-          <span className={cls.product}>Product</span>
+          <span className={cls.product}>{t('wishlist.product')}</span>
 
-          <span className={cls.price}>Price</span>
+          <span className={cls.price}>{t('wishlist.price')}</span>
 
-          <span className={cls.quantity}>Quantity</span>
+          <span className={cls.quantity}>{t('wishlist.quantity')}</span>
 
-          <span className={cls.add}>Add to cart</span>
+          <span className={cls.add}>{t('wishlist.addCart')}</span>
 
         </div>
 
@@ -43,7 +43,7 @@ const Wishlist = () => {
 
           <div className={cls.checkout}>
 
-            <button>Clear wishlist</button>
+            <button>{t('wishlist.clear')}</button>
 
           </div>
 

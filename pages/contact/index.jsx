@@ -13,6 +13,8 @@ import { useTranslation } from "next-i18next";
 import cls from "./contact.module.scss";
 
 const Contact = () => {
+  const { t } = useTranslation('common')
+
   return (
     <div className={cls.contact}>
 
@@ -20,61 +22,60 @@ const Contact = () => {
         <div className={cls.contact__form}>
           <div className={cls.contact__form_fields}>
             <div className={cls.fields__head}>
-              <h2>Get In Touch</h2>
+              <h2>{t('contact.touch')}</h2>
               <p>
-                Your email address will not be published. Required fields are
-                marked
+                {t('contact.contactText')}
               </p>
             </div>
 
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6} md={6}>
-                <input type="text" placeholder="Full name" />
+                <input type="text" placeholder={t('contact.name')} />
               </Grid>
 
               <Grid item xs={12} sm={6} md={6}>
-                <input type="text" placeholder="Email address" />
+                <input type="text" placeholder={t('contact.email')} />
               </Grid>
 
               <Grid item xs={12} md={12}>
-                <input type="text" placeholder="Phone number" />
+                <input type="text" placeholder={t('contact.phone')} />
               </Grid>
 
               <Grid item xs={12} md={12}>
-                <textarea placeholder="What's on your mind?"></textarea>
+                <textarea placeholder={t('contact.mind')}></textarea>
               </Grid>
 
-              <button>Ask A Question</button>
+              <button>{t('contact.ask')}</button>
             </Grid>
           </div>
 
           <div className={cls.contact__form_features}>
             <div className={cls.features__head}>
-              <h2>Our Store</h2>
-              <p>Easy to find us, much easier to reach you anywhere</p>
+              <h2>{t('contact.store')}</h2>
+              <p>{t('contact.storeText')}</p>
             </div>
 
-            <h4>Lets Talk</h4>
+            <h4>{t('contact.talk')}</h4>
             <div className={cls.feature}>
               <i className="fa-light fa-phone-volume"></i>
 
               <div>
-                <p>Phone: +201025864313</p>
-                <p>Email: civil.ahmad.eid@gmail.com</p>
+                <p>{t('contact.phone')}: +201025864313</p>
+                <p>{t('contact.email')}: civil.ahmad.eid@gmail.com</p>
               </div>
             </div>
 
-            <h4>Find Us</h4>
+            <h4>{t('contact.findUs')}</h4>
             <div className={cls.feature}>
               <i className="fa-light fa-location-dot"></i>
 
               <div>
-                <p>Address: Cairo, nasr city</p>
-                <p>Country: Egypt</p>
+                <p>{t('contact.address')}: Cairo, nasr city</p>
+                <p>{t('contact.country')}: Egypt</p>
               </div>
             </div>
 
-            <h4>Hours of Operation</h4>
+            <h4>{t('contact.operation')}</h4>
             <div className={cls.feature}>
               <i className="fa-light fa-clock-desk"></i>
 

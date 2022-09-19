@@ -4,6 +4,7 @@ import {
   HeaderThree, 
   HeaderFour,
   HeaderFive,
+  HeaderSix,
   Deals, 
   DealsTwo, 
   HomeCategory, 
@@ -36,9 +37,11 @@ const Home = () => {
 
       {/* <HeaderThree /> */}
 
-      <HeaderFour top={false} />
+      {/* <HeaderFour top={false} /> */}
 
-      {/* <HeaderFive /> */}
+      <HeaderFive />
+
+      {/* <HeaderSix /> */}
 
       <Deals />
 

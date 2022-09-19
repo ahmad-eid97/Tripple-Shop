@@ -3,9 +3,13 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Rating from '@mui/material/Rating';
 
+import { useTranslation } from 'next-i18next';
+
 import cls from './topProducts.module.scss';
 
 const TopProducts = () => {
+  const { t } = useTranslation('common')
+
   return (
     <div className={cls.topProducts}>
 
@@ -15,7 +19,7 @@ const TopProducts = () => {
 
           <Grid item xs={12} sm={6} xl={3}>
 
-            <h4><span></span>Featured Products</h4>
+            <h4><span></span>{t('product.featured')}</h4>
 
             <div className={cls.topProducts__product}>
 
@@ -60,7 +64,7 @@ const TopProducts = () => {
 
           <Grid item xs={12} sm={6} xl={3}>
 
-            <h4><span></span>Onsale Products</h4>
+            <h4><span></span>{t('product.onSale')}</h4>
 
             <div className={cls.topProducts__product}>
 
@@ -105,7 +109,7 @@ const TopProducts = () => {
 
           <Grid item xs={12} sm={6} xl={3}>
 
-            <h4><span></span>Top Rated Products</h4>
+            <h4><span></span>{t('product.topRated')}</h4>
 
             <div className={cls.topProducts__product}>
 

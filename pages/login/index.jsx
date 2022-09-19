@@ -11,10 +11,13 @@ import { wrapper } from "../../store/store";
 
 import Container from "@mui/material/Container";
 
+import { useTranslation } from "next-i18next";
+
 import cls from "./login.module.scss";
 
 const Login = () => {
-  const router = useRouter()
+  const router = useRouter();
+  const { t, i18n } = useTranslation('common');
 
   return (
     <Container maxWidth="xxl">
@@ -22,14 +25,14 @@ const Login = () => {
 
         <div className={cls.login__formArea}>
 
-          <h3>Login to your account</h3>
+          <h3>{t('login.login')}</h3>
 
           <div className={cls.field}>
-            <input type="text" placeholder="Email" />
+            <input type="text" placeholder={t('login.email')} />
           </div>
 
           <div className={cls.field}>
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder={t('login.password')} />
           </div>
 
           <div className={cls.remember}>
@@ -38,33 +41,33 @@ const Login = () => {
 
               <input type="checkbox" />
 
-              <span>Remember Me</span>
+              <span>{t('login.remember')}</span>
 
             </div>
 
-            <p>Forgot Password?</p>
+            <p>{t('login.forgot')}</p>
 
           </div>
 
-          <button>Login</button>
+          <button>{t('login.logIn')}</button>
 
-          <p className={cls.or}>Or Login With</p>
+          <p className={cls.or}>{t('login.orLogin')}</p>
 
           <div className={cls.externalAuth}>
 
             <div className={`${cls.externalAuth__external} ${cls.google}`}>
 
-              <img src="/imgs/auth/G_logo.svg" alt="externalAuthImage" />
+              <img src="/imgs/auth/G_logo.svg" alt="externalAuthImage" className={cls[i18n.language]} />
 
-              <p>Google</p>
+              <p>{t('login.google')}</p>
 
             </div>
 
             <div className={`${cls.externalAuth__external} ${cls.facebook}`}>
 
-              <img src="/imgs/auth/F_logo.svg" alt="externalAuthImage" />
+              <img src="/imgs/auth/F_logo.svg" alt="externalAuthImage" className={cls[i18n.language]} />
 
-              <p>Facebook</p>
+              <p>{t('login.facebook')}</p>
 
             </div>
 
@@ -72,9 +75,9 @@ const Login = () => {
 
           <div className={cls.register}>
 
-            <p>Dont have an account?</p>
+            <p>{t('login.noAccount')}</p>
 
-            <span onClick={() => router.push('/register')}>Register Now</span>
+            <span onClick={() => router.push('/register')}>{t('login.register')}</span>
 
           </div>
 

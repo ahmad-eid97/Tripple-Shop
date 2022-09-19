@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState } from 'react';
+
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -11,7 +13,8 @@ import { useTranslation } from "next-i18next";
 import cls from './headerFive.module.scss';
 
 const Header = () => {
-  const { i18n } = useTranslation()
+  const [dropDown, setDropDown] = useState(0)
+  const { i18n } = useTranslation();
 
   return (
     <div className={cls.header}>
@@ -26,17 +29,241 @@ const Header = () => {
               <div className={cls.categoriesList}>
                 <h6>Explore Categories</h6>
                 <ul>
-                  <li><span>Accessories</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>All In one</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Audio Speakers</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Bluetooth Speakers</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Cameras</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Cameras & Photography</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Cases</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Chargers</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Computer Cases</span> <i className="fa-duotone fa-eye"></i></li>
-                  <li><span>Labtops</span> <i className="fa-duotone fa-eye"></i></li>
+
+                  <li>
+                    <span>Accessories</span>
+                    <i className="fa-duotone fa-eye"></i>
+                  </li>
+
+                  <li>
+                    <span>All In one</span>
+                    <i className="fa-duotone fa-eye"></i>
+                  </li>
+
+                  <li>
+                    <span>Audio Speakers</span>
+                    <i className="fa-duotone fa-eye"></i>
+                  </li>
+
+                  <li>
+                    <span>Bluetooth Speakers</span> 
+                    <i className="fa-duotone fa-eye"></i>
+                  </li>
+
+                  <li onMouseEnter={() => setDropDown(1)} onMouseLeave={() => setDropDown(0)}>
+                    <span>Cameras</span> 
+                    <i className={`fa-regular fa-angle-${i18n.language === 'en' ? 'right' : 'left'}`}></i>
+
+                    {dropDown === 1 &&
+
+                      <div className={`${cls.dropDown} ${cls[i18n.language]}`}>
+
+                        <Grid container>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Computers</li>
+                              <li>Cases</li>
+                              <li>Laptops</li>
+                              <li>Mobiles</li>
+                              <li>Tv & Audios</li>
+                              <li>Samsung</li>
+                              <li>Dell</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Thin Laptops</li>
+                              <li>Lenovo</li>
+                              <li>Acer</li>
+                              <li>Panasonic</li>
+                              <li>Microsoft</li>
+                              <li>Gadgets</li>
+                              <li>Store</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Deals</li>
+                              <li>Security</li>
+                              <li>Headphones</li>
+                              <li>Computers</li>
+                              <li>Cameras</li>
+                              <li>Bikes</li>
+                              <li>Software</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <img src="/imgs/products/play.png" alt="productImage" />
+
+                          </Grid>
+
+                        </Grid>
+
+                      </div>
+
+                    }
+
+                  </li>
+
+                  <li>
+                    <span>Cameras & Photography</span> 
+                    <i className="fa-duotone fa-eye"></i>
+                  </li>
+
+                  <li onMouseEnter={() => setDropDown(2)} onMouseLeave={() => setDropDown(0)}>
+                    <span>Cases</span> 
+                    <i className={`fa-regular fa-angle-${i18n.language === 'en' ? 'right' : 'left'}`}></i>
+
+                    {dropDown === 2 &&
+
+                      <div className={`${cls.dropDown} ${cls[i18n.language]}`}>
+
+                        <Grid container>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Computers</li>
+                              <li>Cases</li>
+                              <li>Laptops</li>
+                              <li>Mobiles</li>
+                              <li>Tv & Audios</li>
+                              <li>Samsung</li>
+                              <li>Dell</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Thin Laptops</li>
+                              <li>Lenovo</li>
+                              <li>Acer</li>
+                              <li>Panasonic</li>
+                              <li>Microsoft</li>
+                              <li>Gadgets</li>
+                              <li>Store</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Deals</li>
+                              <li>Security</li>
+                              <li>Headphones</li>
+                              <li>Computers</li>
+                              <li>Cameras</li>
+                              <li>Bikes</li>
+                              <li>Software</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <img src="/imgs/products/laptop.png" alt="productImage" />
+
+                          </Grid>
+
+                        </Grid>
+
+                      </div>
+
+                    }
+
+                  </li>
+
+                  <li>
+                    <span>Chargers</span> 
+                    <i className="fa-duotone fa-eye"></i>
+                  </li>
+
+                  <li onMouseEnter={() => setDropDown(3)} onMouseLeave={() => setDropDown(0)}>
+                    <span>Computer Cases</span> 
+                    <i className={`fa-regular fa-angle-${i18n.language === 'en' ? 'right' : 'left'}`}></i>
+
+                    {dropDown === 3 &&
+
+                      <div className={`${cls.dropDown} ${cls[i18n.language]}`}>
+
+                        <Grid container>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Computers</li>
+                              <li>Cases</li>
+                              <li>Laptops</li>
+                              <li>Mobiles</li>
+                              <li>Tv & Audios</li>
+                              <li>Samsung</li>
+                              <li>Dell</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Thin Laptops</li>
+                              <li>Lenovo</li>
+                              <li>Acer</li>
+                              <li>Panasonic</li>
+                              <li>Microsoft</li>
+                              <li>Gadgets</li>
+                              <li>Store</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <ul>
+                              <li>Deals</li>
+                              <li>Security</li>
+                              <li>Headphones</li>
+                              <li>Computers</li>
+                              <li>Cameras</li>
+                              <li>Bikes</li>
+                              <li>Software</li>
+                            </ul>
+
+                          </Grid>
+
+                          <Grid item lg={6}>
+
+                            <img src="/imgs/products/headphone.png" alt="productImage" />
+
+                          </Grid>
+
+                        </Grid>
+
+                      </div>
+
+                    }
+                  </li>
+
+                  <li>
+                    <span>Labtops</span> 
+                    <i className="fa-duotone fa-eye"></i>
+                  </li>
+                  
                 </ul>
+
               </div>
 
             </Grid>

@@ -30,6 +30,10 @@
         color: var(--alert);
         opacity: 1;
       }
+      &.ar {
+        right: unset;
+        left: 20px;
+      }
     }
 
     p {

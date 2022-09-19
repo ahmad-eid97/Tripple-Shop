@@ -12,15 +12,18 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { wrapper } from '../../store/store';
 
+import { useTranslation } from 'next-i18next';
+
 import cls from './category.module.scss';
 
-const headerNav = [
-  'Category',
-  'Electronics'
-]
-
 const Category = () => {
-  const [viewType, setViewType] = useState('grid')
+  const [viewType, setViewType] = useState('grid');
+  const { t } = useTranslation('common');
+
+  const headerNav = [
+    `${t('category.category')}`,
+    'Electronics'
+  ]
 
   return (
     <div className={cls.category}>

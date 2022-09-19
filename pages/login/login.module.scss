@@ -115,6 +115,12 @@
           @include xs {
             transform: translateX(25px);
           }
+          &.ar {
+            transform: translateX(-25px);
+            @include xs {
+              transform: translateX(-22px);
+            }
+          }
         }
         p {
           opacity: 0;
@@ -141,6 +147,12 @@
             }
             @include xs {
               transform: translateX(33px);
+            }
+            &.ar {
+              transform: translateX(-33px);
+              @include xs {
+                transform: translateX(-29px);
+              }
             }
           }
           &:hover {

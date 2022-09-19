@@ -11,10 +11,13 @@ import { wrapper } from "../../store/store";
 
 import Container from "@mui/material/Container";
 
+import { useTranslation } from "next-i18next";
+
 import cls from "./register.module.scss";
 
 const Login = () => {
   const router = useRouter()
+  const { t, i18n } = useTranslation('common');
 
   return (
     <Container maxWidth="xxl">
@@ -22,22 +25,22 @@ const Login = () => {
 
         <div className={cls.register__formArea}>
 
-          <h3>Create new account to join us</h3>
+          <h3>{t('register.create')}</h3>
 
           <div className={cls.field}>
-            <input type="text" placeholder="Full Name" />
+            <input type="text" placeholder={t('register.name')} />
           </div>
 
           <div className={cls.field}>
-            <input type="text" placeholder="Email" />
+            <input type="text" placeholder={t('register.email')} />
           </div>
 
           <div className={cls.field}>
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder={t('register.password')} />
           </div>
 
           <div className={cls.field}>
-            <input type="password" placeholder="Confirm Password" />
+            <input type="password" placeholder={t('register.confirm')} />
           </div>
 
           <div className={cls.remember}>
@@ -46,33 +49,31 @@ const Login = () => {
 
               <input type="checkbox" />
 
-              <span>Remember Me</span>
+              <span>{t('register.remember')}</span>
 
             </div>
 
-            <p>Forgot Password?</p>
-
           </div>
 
-          <button>Create Account</button>
+          <button>{t('register.createAccount')}</button>
 
-          <p className={cls.or}>Or Signup With</p>
+          <p className={cls.or}>{t('register.orSignup')}</p>
 
           <div className={cls.externalAuth}>
 
             <div className={`${cls.externalAuth__external} ${cls.google}`}>
 
-              <img src="/imgs/auth/G_logo.svg" alt="externalAuthImage" />
+              <img src="/imgs/auth/G_logo.svg" alt="externalAuthImage" className={cls[i18n.language]} />
 
-              <p>Google</p>
+              <p>{t('register.google')}</p>
 
             </div>
 
             <div className={`${cls.externalAuth__external} ${cls.facebook}`}>
 
-              <img src="/imgs/auth/F_logo.svg" alt="externalAuthImage" />
+              <img src="/imgs/auth/F_logo.svg" alt="externalAuthImage" className={cls[i18n.language]} />
 
-              <p>Facebook</p>
+              <p>{t('register.facebook')}</p>
 
             </div>
 
@@ -80,9 +81,9 @@ const Login = () => {
 
           <div className={cls.login}>
 
-            <p>already have account?</p>
+            <p>{t('register.haveAccount')}</p>
 
-            <span onClick={() => router.push('/login')}>Login Now</span>
+            <span onClick={() => router.push('/login')}>{t('register.login')}</span>
 
           </div>
 

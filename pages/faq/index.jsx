@@ -23,7 +23,7 @@ const Index = () => {
     <div className={cls.faq}>
       <Container maxWidth="xxl">
         <h1 className={cls.faq_title}>
-        FREQUENTLY ASKED QUESTIONS
+          {t('faq.faq')}
         </h1>
 
         <Accordion sx={{ boxShadow: 0 }}>

@@ -5,6 +5,7 @@
   "nav.pages": "الصفحات",
   "nav.policy": "سياسات الموقع",
   "nav.contact": "تواصل معنا",
+  "nav.faq": "الاسئلة الشائعة",
   
   "nav.english": "الانجليزية",
   "nav.arabic": "العربية",
@@ -23,6 +24,12 @@
   "nav.compare": "المقارنة",
   "nav.wishlist": "قائمة الأمنيات",
   "nav.cart": "عربة التسوق",
+  "nav.viewCart": "عرض العربة",
+  "nav.clearCart": "تفريغ العربة",
+  "nav.emptyCart": "لا توجد منتجات في العربة!",
+  "nav.viewWishlist": "عرض الامنيات",
+  "nav.clearWishlist": "تفريغ الأمنيات",
+  "nav.emptyWishlist": "لا توجد منتجات في الامنيات!",
 
   "footer.logo": "تريبل شوب",
   "footer.email": "البريد الإلكتروني",

@@ -12,12 +12,12 @@ import { useTranslation } from "next-i18next";
 import cls from "./about.module.scss";
 
 const About = () => {
-  const { i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <div>
       <Container maxWidth="xxl">
-        <h1 className={cls.about_title}>ABOUT US</h1>
+        <h1 className={cls.about_title}>{t('about.about')}</h1>
       </Container>
 
       <Container maxWidth="xxl" className={cls.about}>

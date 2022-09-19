@@ -7,7 +7,7 @@ import cls from './wishlistItem.module.scss';
 
 const CartItem = () => {
   const [quantity, setQuantity] = useState(1);
-  const { i18n } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
 
   const changeQuantity = (type, value) => {
     if (type === 'plus') setQuantity(prev => (prev += 1))
@@ -34,7 +34,7 @@ const CartItem = () => {
         <button onClick={() => changeQuantity('plus')}>+</button>
       </div>
 
-      <button className={cls.addBtn}>Add to cart</button>
+      <button className={cls.addBtn}>{t('wishlist.addCart')}</button>
 
     </div>
   )

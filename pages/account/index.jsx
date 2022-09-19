@@ -28,6 +28,7 @@ import cls from "./account.module.scss";
 const Account = () => {
   const [activeTab, setActiveTab] = useState("personal");
   const [openMobSidebar, setOpenMobSidebar] = useState(false);
+  const { t } = useTranslation('common');
 
   const renderView = () => {
     switch (activeTab) {
@@ -47,7 +48,7 @@ const Account = () => {
   return (
     <div className={cls.account}>
       <Container maxWidth="xxl">
-        <PagesNavHeader steps={["Account"]} />
+        <PagesNavHeader steps={[`${t('account.account')}`]} />
 
         <div className={cls.account__wrapper}>
           <div className={cls.mobileNav}>

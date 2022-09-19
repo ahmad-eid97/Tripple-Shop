@@ -12,10 +12,12 @@ import { useTranslation } from "next-i18next";
 import cls from "./policy.module.scss";
 
 const Policy = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div className={cls.privacy}>
       <Container maxWidth="xxl">
-        <h1 className={cls.privacy_title}>PRIVACY POLICY</h1>
+        <h1 className={cls.privacy_title}>{t('policy.policy')}</h1>
 
         <h2>
           <i className="fa-light fa-lightbulb-exclamation"></i> INTELLECTUAL

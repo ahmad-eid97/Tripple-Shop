@@ -5,10 +5,13 @@ import Review from './Review/Review';
 import Grid from '@mui/material/Grid';
 import Rating from '@mui/material/Rating';
 
+import { useTranslation } from 'next-i18next';
+
 import cls from './reviewsTab.module.scss';
 
 const ReviewsTab = () => {
   const [rate, setRate] = useState(0)
+  const { t } = useTranslation('common');
 
   return (
     <div className={cls.reviewsTab}>
@@ -19,11 +22,11 @@ const ReviewsTab = () => {
 
           <div className={cls.reviewsTab__rating}>
 
-            <h3>Based On 3 Reviews</h3>
+            <h3>{t('product.based')} 3 {t('product.reviews')}</h3>
 
             <div className={cls.overAll}>
               <p>4.2</p>
-              <span>overall</span>
+              <span>{t('product.overall')}</span>
             </div>
 
             <div className={cls.reviewsTab__rating_stars}>
@@ -93,11 +96,11 @@ const ReviewsTab = () => {
 
           <div className={cls.reviewsTab__addReview}>
 
-            <h3>Add a review</h3>
+            <h3>{t('product.addReview')}</h3>
 
             <div className={cls.reviewsTab__addReview_field}>
 
-              <label className={cls.label}>Your Rating</label>
+              <label className={cls.label}>{t('product.rating')}</label>
                 
               <Rating
                 value={rate}
@@ -110,30 +113,30 @@ const ReviewsTab = () => {
 
             <div className={cls.reviewsTab__addReview_field}>
 
-              <label className={cls.label}>Your Review</label>
+              <label className={cls.label}>{t('product.review')}</label>
                 
-              <textarea placeholder='Review'></textarea>
+              <textarea placeholder={t('product.review')}></textarea>
 
             </div>
 
             <div className={cls.reviewsTab__addReview_field}>
 
-              <label className={cls.label}>Name*</label>
+              <label className={cls.label}>{t('product.name')}*</label>
                 
-              <input type="text" placeholder='Name' />
+              <input type="text" placeholder={t('product.name')} />
 
             </div>
 
             <div className={cls.reviewsTab__addReview_field}>
 
-              <label className={cls.label}>Email*</label>
+              <label className={cls.label}>{t('product.email')}*</label>
                 
-              <input type="text" placeholder='Email' />
+              <input type="text" placeholder={t('product.email')} />
 
             </div>
 
             <div className={cls.addBtn}>
-              <button>Add Review</button>
+              <button>{t('product.add')}</button>
             </div>
 
           </div>

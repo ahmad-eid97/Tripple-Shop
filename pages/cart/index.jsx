@@ -14,26 +14,26 @@ import { useTranslation } from 'next-i18next';
 import cls from './cart.module.scss';
 
 const Cart = () => {
-  const { i18n } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
 
   return (
     <div className={cls.cart}>
 
       <Container maxWidth="xxl">
 
-        <PagesNavHeader steps={["Cart"]} />
+        <PagesNavHeader steps={[`${t('cart.cart')}`]} />
 
         <div className={cls.cart__header}>
 
-          <span className={cls.product}>Product</span>
+          <span className={cls.product}>{t('cart.product')}</span>
 
-          <span className={cls.price}>Price</span>
+          <span className={cls.price}>{t('cart.price')}</span>
 
-          <span className={cls.quantity}>Quantity</span>
+          <span className={cls.quantity}>{t('cart.quantity')}</span>
 
-          <span className={cls.total}>Total</span>
+          <span className={cls.total}>{t('cart.total')}</span>
 
-          <span className={cls.remove}>Remove</span>
+          <span className={cls.remove}>{t('cart.remove')}</span>
 
         </div>
 
@@ -45,17 +45,17 @@ const Cart = () => {
 
           <div className={cls.coupon}>
 
-            <input type="text" placeholder='Coupon code' />
+            <input type="text" placeholder={t('cart.couponCode')} />
 
-            <button className={cls[i18n.language]}>Apply coupon</button>
+            <button className={cls[i18n.language]}>{t('cart.coupon')}</button>
 
           </div>
 
           <div className={cls.checkout}>
 
-            <button>Clear cart</button>
+            <button>{t('cart.clear')}</button>
 
-            <button className={cls.proceed}>Proceed to checkout</button>
+            <button className={cls.proceed}>{t('cart.checkout')}</button>
 
           </div>
 
@@ -64,25 +64,25 @@ const Cart = () => {
         <div className={cls.cart__wrapper}>
           <div className={cls.cartTotals}>
 
-            <h3 className={cls[i18n.language]}>Cart Totals <span></span></h3>
+            <h3 className={cls[i18n.language]}>{t('cart.totals')} <span></span></h3>
 
             <div className={cls.part}>
-              <p>Subtotal:</p>
+              <p>{t('cart.subTotal')}:</p>
               <span>$2000</span>
             </div>
 
             <div className={cls.part}>
-              <p>Shippment:</p>
+              <p>{t('cart.shippment')}:</p>
               <span>$10</span>
             </div>
 
             <div className={cls.part}>
-              <p>Subtotal:</p>
+              <p>{t('cart.subTotal')}:</p>
               <span>$2010</span>
             </div>
 
             <div className={cls.part}>
-              <p>Total:</p>
+              <p>{t('cart.total')}:</p>
               <span>$2010</span>
             </div>
 

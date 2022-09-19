@@ -8,7 +8,7 @@ import cls from './productDetails.module.scss';
 
 const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
-  const { i18n } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
 
   const changeQuantity = (type, value) => {
     if (type === 'plus') setQuantity(prev => (prev += 1))
@@ -30,11 +30,11 @@ const ProductDetails = () => {
 
         <Rating name="read-only" value={4} readOnly />
 
-        <p>( 3 customers reviews )</p>
+        <p>( 3 {t('product.customerReview')} )</p>
 
       </div>
 
-      <p className={cls.productDetails_rating_availibility}>Avalibility: <span>420 in stock</span></p>
+      <p className={cls.productDetails_rating_availibility}>{t('product.availability')}: <span>420 in stock</span></p>
 
       <div className={cls.productDetails_specs}>
 
@@ -59,15 +59,15 @@ const ProductDetails = () => {
             <button onClick={() => changeQuantity('plus')}>+</button>
           </div>
 
-          <button className={cls.addBtn}>Add to cart</button>
+          <button className={cls.addBtn}>{t('product.addCart')}</button>
 
         </div>
 
         <div className={cls.btns}>
 
-          <button><i className="fa-light fa-heart"></i> Wishlist</button>
+          <button><i className="fa-light fa-heart"></i> {t('product.wishlist')}</button>
 
-          <button><i className="fa-light fa-code-compare"></i> Compare</button>
+          <button><i className="fa-light fa-code-compare"></i> {t('product.compare')}</button>
 
         </div>
 

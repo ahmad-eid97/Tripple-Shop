@@ -19,6 +19,7 @@
       padding: 20px 0;
       background-color: var(--default-background);
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
       h6 {
         text-align: center !important;
         background-color: var(--main-color);
@@ -43,6 +44,37 @@
         &:hover {
           color: var(--main-color);
           font-weight: 600;
+        }
+      }
+
+      .dropDown {
+        position: absolute;
+        z-index: 9999;
+        bottom: 0;
+        left: 100%;
+        width: 150%;
+        height: 100%;
+        background-color: var(--default-background);
+        padding: 20px 10px;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        &.ar {
+          left: unset;
+          right: 100%;
+        }
+        ul {
+          li {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        img {
+          object-fit: contain;
         }
       }
 

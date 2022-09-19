@@ -32,6 +32,8 @@ export { default as HeaderFour } from './home/HeaderFour/HeaderFour';
 
 export { default as HeaderFive } from './home/HeaderFive/HeaderFive';
 
+export { default as HeaderSix } from './home/HeaderSix/HeaderSix';
+
 export { default as Deals } from './home/Deals/Deals';
 
 export { default as DealsTwo } from './home/DealsTwo/DealsTwo';

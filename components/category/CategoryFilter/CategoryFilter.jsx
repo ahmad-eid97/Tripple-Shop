@@ -4,10 +4,13 @@ import { useState } from 'react';
 import Slider from '@mui/material/Slider';
 import Rating from '@mui/material/Rating';
 
+import { useTranslation } from 'next-i18next';
+
 import cls from './categoryFilter.module.scss';
 
 const CategoryFilter = () => {
   const [priceRange, setPriceRange] = useState([20, 37]);
+  const { t } = useTranslation('common');
 
   const handleChange = (event, newValue) => {
     setPriceRange(newValue);
@@ -18,7 +21,7 @@ const CategoryFilter = () => {
 
       <div className={cls.categoriesList}>
 
-        <h6>Categories</h6>
+        <h6>{t('category.categories')}</h6>
 
         <ul>
 
@@ -37,7 +40,7 @@ const CategoryFilter = () => {
 
       <div className={cls.priceFilter}>
 
-        <h6>Price</h6>
+        <h6>{t('category.price')}</h6>
       
         <div className={cls.slider}>
 
@@ -56,7 +59,7 @@ const CategoryFilter = () => {
 
       <div className={cls.relatedProducts}>
 
-        <h6>Related Products</h6>
+        <h6>{t('category.related')}</h6>
 
         <div className={cls.relatedProducts__products}>
 

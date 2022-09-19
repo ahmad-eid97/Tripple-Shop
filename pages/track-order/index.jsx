@@ -13,15 +13,18 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { wrapper } from "../../store/store";
 
+import { useTranslation } from "next-i18next";
+
 import cls from "./trackOrder.module.scss";
 
 const TrackOrder = () => {
   const [showOrderTrack, setShowOrderTrack] = useState(false);
+  const { t } = useTranslation('common');
 
   return (
     <div className={cls.trackOrder}>
       <Container maxWidth="xxl">
-        <PagesNavHeader steps={["Track Order"]} />
+        <PagesNavHeader steps={[`${t('track.track')}`]} />
 
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
@@ -32,11 +35,11 @@ const TrackOrder = () => {
 
           <Grid item xs={12} md={8}>
             <div className={cls.trackBox}>
-              <h3>Check Your Order Status</h3>
+              <h3>{t('track.check')}</h3>
 
-              <input type="text" placeholder="Type Your Order ID" />
+              <input type="text" placeholder={t('track.typeOrderId')} />
 
-              <button onClick={() => setShowOrderTrack(!showOrderTrack)}>Track Order</button>
+              <button onClick={() => setShowOrderTrack(!showOrderTrack)}>{t('track.track')}</button>
             </div>
           </Grid>
         </Grid>
@@ -49,7 +52,7 @@ const TrackOrder = () => {
                   <i className="fa-duotone fa-alarm-clock"></i>
                 </p>
 
-                <h4>Processing</h4>
+                <h4>{t('track.processing')}</h4>
               </div>
 
               <div className={cls.step}>
@@ -57,7 +60,7 @@ const TrackOrder = () => {
                   <i className="fa-duotone fa-box-open-full"></i>
                 </p>
 
-                <h4>Shipped</h4>
+                <h4>{t('track.shipped')}</h4>
               </div>
 
               <div className={cls.step}>
@@ -65,7 +68,7 @@ const TrackOrder = () => {
                   <i className="fa-duotone fa-truck-container"></i>
                 </p>
 
-                <h4>On The Way</h4>
+                <h4>{t('track.onWay')}</h4>
               </div>
 
               <div className={cls.step}>
@@ -73,7 +76,7 @@ const TrackOrder = () => {
                   <i className="fa-duotone fa-box-check"></i>
                 </p>
 
-                <h4>Delivered</h4>
+                <h4>{t('track.delivered')}</h4>
               </div>
             </div>
 
@@ -81,11 +84,11 @@ const TrackOrder = () => {
               <div className={cls.orderItem}>
                 <div className={cls.orderItem__head}>
                   <p>
-                    Order Id: <span>1213424</span>
+                  {t('track.orderId')} <span>1213424</span>
                   </p>
 
                   <p>
-                    Order Status: <span>Delivered</span>
+                  {t('track.orderStatus')}: <span>Delivered</span>
                   </p>
                 </div>
 
@@ -100,43 +103,43 @@ const TrackOrder = () => {
                       </h6>
 
                       <p>
-                        Price: <span>$2000</span>
+                      {t('track.price')}: <span>$2000</span>
                       </p>
                       <p>
-                        Quantity: <span>2</span>
+                      {t('track.quantity')}: <span>2</span>
                       </p>
 
-                      <button>View Details</button>
+                      <button>{t('track.view')}</button>
                     </div>
                   </div>
 
                   <div className={cls.cancel}>
-                    <button>Cancel Order</button>
+                    <button>{t('track.cancel')}</button>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className={cls.orderTotal}>
-              <h4>Order Totals</h4>
+              <h4>{t('track.orderTotals')}</h4>
 
               <div>
-                <p>Amount: </p>
+                <p>{t('track.amount')}: </p>
                 <span>$3000</span>
               </div>
 
               <div>
-                <p>Shipping: </p>
+                <p>{t('track.shipping')}: </p>
                 <span>$10</span>
               </div>
 
               <div>
-                <p>Shipping To: </p>
+                <p>{t('track.to')}: </p>
                 <span>Sohag, Egypt</span>
               </div>
 
               <div>
-                <p>Total: </p>
+                <p>{t('track.total')}: </p>
                 <span>$3010</span>
               </div>
             </div>

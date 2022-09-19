@@ -57,7 +57,7 @@ const Navbar = ({ rounded }) => {
               className="fa-light fa-grid-2"
               onClick={() => setOpenSidebar(!openSidebar)}
             ></i>{" "}
-            <h5>Tripple Shop</h5>
+            <h5>{t('nav.logo')}</h5>
           </div>
 
           <div className={cls.switches}>
@@ -616,14 +616,14 @@ const Navbar = ({ rounded }) => {
 
                   <div className='smallEmpty'>
                     <img src="/imgs/empty/wishlist.png" alt="emptyImage" />
-                    <h6>No products in wishlist yet!</h6>
+                    <h6>{t('nav.emptyWishlist')}</h6>
                   </div>
 
                   <div className={cls.actions}>
 
-                    <button className={cls.view} onClick={() => router.push('/wishlist')}>view wishlist</button>
+                    <button className={cls.view} onClick={() => router.push('/wishlist')}>{t('nav.viewWishlist')}</button>
 
-                    <button>clear wishlist</button>
+                    <button>{t('nav.clearWishlist')}</button>
 
                   </div>
                 </div>
@@ -655,14 +655,14 @@ const Navbar = ({ rounded }) => {
 
                   <div className='smallEmpty'>
                     <img src="/imgs/empty/cart.png" alt="emptyImage" />
-                    <h6>No products in cart yet!</h6>
+                    <h6>{t('nav.emptyCart')}</h6>
                   </div>
 
                   <div className={cls.actions}>
 
-                    <button className={cls.view} onClick={() => router.push('/cart')}>view cart</button>
+                    <button className={cls.view} onClick={() => router.push('/cart')}>{t('nav.viewCart')}</button>
 
-                    <button>clear cart</button>
+                    <button>{t('nav.clearCart')}</button>
 
                   </div>
 

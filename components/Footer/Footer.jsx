@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
@@ -9,7 +10,8 @@ import { useTranslation } from "next-i18next";
 import cls from "./footer.module.scss";
 
 const Footer = () => {
-  const { t, i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation('nav');
+  const router = useRouter();
 
   return (
     <div className={cls.footer}>
@@ -36,7 +38,7 @@ const Footer = () => {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} md={4}>
               <div className={cls.logoArea}>
-                <h1>{t('footer.logo')}</h1>
+                <h1 onClick={() => router.push('/')}>{t('footer.logo')}</h1>
 
                 <div className={cls.support}>
                   <i className="fa-thin fa-hands-holding-heart"></i>
@@ -79,19 +81,19 @@ const Footer = () => {
               <h5></h5>
               <ul>
                 <li>
-                  <Link href="/wishlist">Wishlist</Link>
+                  <Link href="/wishlist">{t('nav.wishlist')}</Link>
                 </li>
                 <li>
-                  <Link href="/about">About</Link>
+                  <Link href="/about">{t('nav.about')}</Link>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/contact">{t('nav.contact')}</Link>
                 </li>
                 <li>
-                  <Link href="/policy">Policy</Link>
+                  <Link href="/policy">{t('nav.policy')}</Link>
                 </li>
                 <li>
-                  <Link href="/faq">FAQ</Link>
+                  <Link href="/faq">{t('nav.faq')}</Link>
                 </li>
               </ul>
             </Grid>

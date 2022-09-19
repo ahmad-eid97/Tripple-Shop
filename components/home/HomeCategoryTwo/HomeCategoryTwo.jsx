@@ -17,7 +17,7 @@ import cls from './homeCategoryTwo.module.scss';
 
 const HomeCategory = () => {
   const [currentCategory, setCurrentCategory] = useState(1)
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className={`${cls.homeCategory}`}>
@@ -73,7 +73,7 @@ const HomeCategory = () => {
 
                   </div>
 
-                  <button>Add to cart</button>
+                  <button>{t('product.addCart')}</button>
 
                 </div>
 
