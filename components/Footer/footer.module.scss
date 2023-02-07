@@ -120,6 +120,31 @@
       }
     }
 
+    .mobileAccordion {
+      display: none;
+      width: 100%;
+      @include sm {
+        display: inline-block;
+        div {
+          margin: 0px;
+          &:before {
+            content: none;
+          }
+        }
+        & > div {
+          margin-bottom: 10px;
+          width: 100%;
+          color: #000 !important;
+        }
+      }
+    }
+
+    .footerPart {
+      @include sm {
+        display: none;
+      }
+    }
+
     h4 {
       margin-bottom: 20px;
     }
