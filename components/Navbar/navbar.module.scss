@@ -6,11 +6,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: relative;
     .logo {
       cursor: pointer;
+      .bigImage {
+        height: 75px;
+        @include md {
+          display: none;
+        }
+      }
     }
     .links {
       ul {
@@ -64,6 +70,12 @@
       // padding: 5px 0px;
       .smallLogo {
         display: none;
+        .smallImage {
+          height: 50px;
+          @include md {
+            display: inline-block;
+          }
+        }
       }
       .switches {
         display: flex;
@@ -198,6 +210,8 @@
         }
       }
       @include md {
+        padding-top: 5px;
+        padding-bottom: 5px;
         .smallLogo {
           display: inline;
           color: #fff;

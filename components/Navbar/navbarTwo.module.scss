@@ -6,10 +6,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     .logo {
       cursor: pointer;
+      .bigImage {
+        height: 75px;
+        @include md {
+          display: none;
+        }
+      }
     }
     
     .navbar__search__searchArea {
@@ -72,6 +78,12 @@
       position: relative;
       .smallLogo {
         display: none;
+        .smallImage {
+          height: 50px;
+          @include md {
+            display: inline-block;
+          }
+        }
       }
       .switches {
         display: flex;
@@ -243,6 +255,8 @@
         }
       }
       @include md {
+        padding-top: 5px;
+        padding-bottom: 5px;
         .smallLogo {
           display: inline;
           color: #fff;

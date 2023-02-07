@@ -1,25 +1,26 @@
 const langRedirection = (req, locale) => {
-  const currentLang = req.cookies['gridsStoreLang'] || 'en';
+  const currentLang = req.cookies["grids-apps-shop-lang"] || "en";
 
   if (locale === currentLang) return;
 
-  let redirectLocation = '';
+  let redirectLocation = "";
 
-  if (currentLang === 'en') {
+  if (currentLang === "en") {
     redirectLocation = req.url;
   } else {
-    redirectLocation = `/${currentLang}/${req.url.startsWith("/") ? req.url.slice(1) : req.url}`
+    redirectLocation = `/${currentLang}/${
+      req.url.startsWith("/") ? req.url.slice(1) : req.url // TAKE WHAT EVER AFTER '/' FOR THE PATH
+    }`;
   }
 
   if (redirectLocation) {
     return {
       redirect: {
         destination: redirectLocation,
-        permanent: false
-      }
-    }
+        permanent: false,
+      },
+    };
   }
-
-}
+};
 
 export default langRedirection;

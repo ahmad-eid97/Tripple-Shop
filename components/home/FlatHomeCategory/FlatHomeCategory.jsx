@@ -45,28 +45,28 @@ const HomeCategory = ({ rounded }) => {
       case 1:
         return (
           <Swiper
-              modules={[Navigation]}
-              spaceBetween={0}
-              slidesPerView={4}
-              navigation
-              breakpoints={breakpoints}
-            >
-              <SwiperSlide>
-                <ProductBox />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductBox />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductBox />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductBox />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductBox />
-              </SwiperSlide>
-            </Swiper>
+            modules={[Navigation]}
+            spaceBetween={0}
+            slidesPerView={4}
+            navigation
+            breakpoints={breakpoints}
+          >
+            <SwiperSlide>
+              <ProductBox />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductBox />
+            </SwiperSlide>
+          </Swiper>
         )
       case 2:
         return (

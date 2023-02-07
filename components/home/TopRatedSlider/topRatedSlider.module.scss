@@ -1,0 +1,72 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/extends.scss';
+
+.topRatedSlider {
+  margin: 50px 0;
+  display: flex;
+  @include sm {
+    display: block;
+  }
+  button {
+    @extend %mainBtn;
+    border-radius: 0;
+    &:hover {
+      background-color: var(--main-color);
+      color: #fff;
+    }
+  }
+
+  .slidingText {
+    border: 1px solid var(--main-color);
+    opacity: 0.8;
+    overflow: hidden;
+    flex: 1;
+    .internalWrapper {
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 900px;
+      @include xs {
+        width: 1200px;
+      }
+      @include md {
+        width: 1300px;
+      }
+      &.animationOn {
+        animation: slide 15s linear infinite;
+        &.ar {
+          animation: slideAr 15s linear infinite;
+        }
+      }
+      p {
+        min-width: 300px;
+        max-width: 300px;
+        cursor: pointer;
+        @include xs {
+          min-width: 250px;
+          max-width: 250px;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  @keyframes slide {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  @keyframes slideAr {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(100%, 0);
+    }
+  }
+}

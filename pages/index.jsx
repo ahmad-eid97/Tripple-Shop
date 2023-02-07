@@ -5,6 +5,7 @@ import {
   HeaderFour,
   HeaderFive,
   HeaderSix,
+  TopRatedSlider,
   Deals, 
   DealsTwo, 
   HomeCategory, 
@@ -12,6 +13,7 @@ import {
   HomeCategoryThree,
   FlatHomeCategory, 
   Categories, 
+  CategoriesTwo,
   TopProducts 
 } from '../components';
 
@@ -43,6 +45,8 @@ const Home = () => {
 
       {/* <HeaderSix /> */}
 
+      <TopRatedSlider />
+
       <Deals />
 
       <DealsTwo />
@@ -58,6 +62,8 @@ const Home = () => {
       <HomeCategoryTwo />
 
       <Categories />
+
+      <CategoriesTwo />
 
       <TopProducts />
 

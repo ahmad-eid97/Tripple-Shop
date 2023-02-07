@@ -34,6 +34,8 @@ export { default as HeaderFive } from './home/HeaderFive/HeaderFive';
 
 export { default as HeaderSix } from './home/HeaderSix/HeaderSix';
 
+export { default as TopRatedSlider } from './home/TopRatedSlider/TopRatedSlider';
+
 export { default as Deals } from './home/Deals/Deals';
 
 export { default as DealsTwo } from './home/DealsTwo/DealsTwo';
@@ -47,6 +49,8 @@ export { default as HomeCategoryThree } from './home/HomeCategoryThree/HomeCateg
 export { default as FlatHomeCategory } from './home/FlatHomeCategory/FlatHomeCategory';
 
 export { default as Categories } from './home/Categories/Categories';
+
+export { default as CategoriesTwo } from './home/CategoriesTwo/CategoriesTwo';
 
 export { default as TopProducts } from './home/TopProducts/TopProducts';
 

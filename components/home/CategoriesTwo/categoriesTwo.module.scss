@@ -1,0 +1,104 @@
+@import '../../../styles/mixins.scss';
+
+.categories {
+  .categories__head {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .categories__allCategories {
+    .singleCategory {
+      max-width: 500px;
+      margin: auto;
+      cursor: pointer;
+      .wrapper {
+        border: 1px solid var(--border-color);
+        padding: 0px 0px;
+        background-color: var(--secondary-background);
+        box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+
+        p {
+          font-size: 0.9rem;
+          font-weight: 600;
+          padding: 0 20px;
+        }
+
+        .subCats {
+          display: flex;
+          justify-content: space-between;
+
+          .subCatsList {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-left: 0;
+            &.ar {
+              border-right: 0;
+              border-left: 1px solid var(--border-color);
+            }
+            ul {
+              list-style: circle;
+              padding: 0 20px;
+              li {
+                padding: 5px 0;
+                font-size: 0.9rem;
+                &:hover {
+                  color: var(--main-color);
+                }
+              }
+            }
+          }
+
+          .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+  
+            .mainImage, .secondImage {
+              height: 250px;
+              width: 250px;
+              object-fit: contain;
+            }
+            .secondImage {
+              display: none;
+            }
+            h5 {
+              display: flex;
+              align-items: center;
+              p {
+                padding: 0;
+              }
+              span {
+                color: var(--main-color);
+                font-size: 1.5rem;
+              }
+            }
+          }
+
+          @include xs {
+            flex-direction: column;
+            .subCatsList {
+              border: unset;
+              border-top: 1px solid var(--border-color);
+              border-bottom: 1px solid var(--border-color);
+            }
+          }
+        }
+        &:hover {
+          .subCats {
+            .img {
+              .mainImage {
+                display: none;
+              }
+              .secondImage {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
