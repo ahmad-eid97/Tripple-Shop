@@ -37,11 +37,11 @@ const Home = () => {
 
       {/* <HeaderTwo /> */}
 
-      {/* <HeaderThree /> */}
+      <HeaderThree />
 
       {/* <HeaderFour top={false} /> */}
 
-      <HeaderFive />
+      {/* <HeaderFive /> */}
 
       {/* <HeaderSix /> */}
 

@@ -20,7 +20,7 @@
     
     .navbar__search__searchArea {
       input {
-        width: 750px;
+        width: 650px;
         height: 40px;
         padding: 8px 20px;
         border: 1px solid #000;
@@ -58,10 +58,10 @@
     .support {
       display: flex;
       align-items: center;
-      gap: 20px;
-      i {
-        font-size: 3rem;
-        color: var(--main-color)
+      gap: 0px;
+      svg {
+        height: 80px !important;
+        width: auto !important;
       }
     }
     @include md {

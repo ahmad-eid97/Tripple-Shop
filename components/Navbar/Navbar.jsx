@@ -7,6 +7,9 @@ import TopNav from "./TopNav/TopNav";
 import LangSwitch from "../switches/LangSwitch/LangSwitch";
 import ModeSwitch from "../switches/ModeSwitch/ModeSwitch";
 import MobSidebar from "./MobSidebar/MobSidebar";
+import AnimatedIcons from "./../UIs/AnimatedIcons/AnimatedIcons";
+
+import * as animationData from "../../public/animated/support.json";
 
 import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
@@ -29,7 +32,7 @@ const Navbar = ({ rounded }) => {
           <Link href="/">
             <img
               className={cls.bigImage}
-              src="./imgs/logos/coloredLogo.png"
+              src="./imgs/logos/coloredSmallLogo.png"
               alt="tripple-shop-logo"
             />
           </Link>
@@ -81,7 +84,7 @@ const Navbar = ({ rounded }) => {
         </div>
 
         <div className={cls.support}>
-          <i className="fa-thin fa-hands-holding-heart"></i>
+          <AnimatedIcons animationData={animationData} />
 
           <div>
             <h6>{t("nav.support")}: 01025864313</h6>

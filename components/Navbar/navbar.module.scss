@@ -50,10 +50,10 @@
     .support {
       display: flex;
       align-items: center;
-      gap: 20px;
-      i {
-        font-size: 3rem;
-        color: var(--main-color)
+      gap: 0px;
+      svg {
+        height: 80px !important;
+        width: auto !important;
       }
     }
     @include md {

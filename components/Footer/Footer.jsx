@@ -47,16 +47,13 @@ const Footer = () => {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} md={4}>
               <div className={cls.logoArea}>
-                <h1 onClick={() => router.push("/")}>{t("footer.logo")}</h1>
-
-                <div className={cls.support}>
-                  <i className="fa-thin fa-hands-holding-heart"></i>
-
-                  <div>
-                    <h6>{t("footer.support")}: 01025864313</h6>
-                    <span>{t("footer.email")}: info@tripple.com</span>
-                  </div>
-                </div>
+                <Link href="/">
+                  <img
+                    className={cls.bigImage}
+                    src="./imgs/logos/coloredLogo.png"
+                    alt="tripple-shop-logo"
+                  />
+                </Link>
 
                 <div>
                   <h6>{t("footer.contact")}</h6>
