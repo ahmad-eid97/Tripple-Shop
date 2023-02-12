@@ -15,18 +15,22 @@ const ProductBox = () => {
   return (
     <div className={cls.productBox}>
 
-      <div className={`${cls.newBadge} ${cls[i18n.language]}`}>
-
-        <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
-
-      </div>
-
-      <div className={`${cls.saleBadge} ${cls[i18n.language]}`}>
-
-        <span>{t('product.off')}</span>
-
-        <p>10%</p>
-
+      <div className={[cls.badgesArea, cls[i18n.language]].join(" ")}>
+        <div className={`${cls.newBadge} ${cls[i18n.language]}`}>
+          <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
+        </div>
+        <div className={`${cls.saleBadge} ${cls[i18n.language]}`}>
+          <span>{t('product.off')}</span>
+          <p>10%</p>
+        </div>
+        <div className={`${cls.special} ${cls[i18n.language]}`}>
+          <span>Offer</span>
+          <p>5%</p>
+        </div>
+        <div className={`${cls.hot} ${cls[i18n.language]}`}>
+          <span>Hot</span>
+          <p>20%</p>
+        </div>
       </div>
 
       <span className={cls.label}>Electronics</span>
@@ -40,9 +44,17 @@ const ProductBox = () => {
         <p>$350</p>
 
         
-        <Tooltip title={t('product.addCart')} placement="top">
-          <i className="fa-regular fa-cart-plus"></i>
-        </Tooltip>
+        <div>
+          <Tooltip title={t('product.addToCompare')} placement="top">
+            <i className="fa-light fa-code-compare"></i>
+          </Tooltip>
+          <Tooltip title={t('product.addToWishlist')} placement="top">
+            <i className="fa-regular fa-heart"></i>
+          </Tooltip>
+          <Tooltip title={t('product.addCart')} placement="top">
+            <i className="fa-regular fa-cart-plus"></i>
+          </Tooltip>
+        </div>
 
       </div>
 
@@ -69,14 +81,6 @@ const ProductBox = () => {
       </div>
 
       <div className={cls.progress}></div>
-
-      <div className={cls.actions}>
-
-        <button><i className="fa-light fa-code-compare"></i> {t('product.compare')}</button>
-
-        <button><i className="fa-light fa-heart"></i> {t('product.wishlist')}</button>
-
-      </div>
 
     </div>
   )

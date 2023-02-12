@@ -39,6 +39,8 @@
 
   "product.points": "Points",
   "product.addCart": "Add to cart",
+  "product.addToWishlist": "Add to wishlist",
+  "product.addToCompare": "Add to Compare",
   "product.sold": "Sold Quantity",
   "product.quantity": "Quantity",
   "product.compare": "Compare",

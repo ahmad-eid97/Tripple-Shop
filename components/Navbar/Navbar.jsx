@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 
 import TopNav from "./TopNav/TopNav";
 import LangSwitch from "../switches/LangSwitch/LangSwitch";
+import CurrencySwitch from './../switches/CurrencySwitch/CurrencySwitch';
 import ModeSwitch from "../switches/ModeSwitch/ModeSwitch";
 import MobSidebar from "./MobSidebar/MobSidebar";
 import AnimatedIcons from "./../UIs/AnimatedIcons/AnimatedIcons";
@@ -111,6 +112,8 @@ const Navbar = ({ rounded }) => {
 
           <div className={cls.switches}>
             <LangSwitch />
+
+            <CurrencySwitch />
 
             <ModeSwitch />
           </div>

@@ -1,5 +1,5 @@
 const langRedirection = (req, locale) => {
-  const currentLang = req.cookies["grids-apps-shop-lang"] || "en";
+  const currentLang = req.cookies["gridsStoreLang"] || "en";
 
   if (locale === currentLang) return;
 

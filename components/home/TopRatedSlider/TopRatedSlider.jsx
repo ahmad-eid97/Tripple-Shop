@@ -11,9 +11,11 @@ const TopRatedSlider = () => {
   const { t, i18n } = useTranslation()
 
   useEffect(() => {
-    if (animatingContainer) {
+    if (animatingContainer.current) {
       setInterval(() => {
-        animatingContainer.current.classList.remove('animationOn')
+        if (animatingContainer.current) {
+          animatingContainer.current.classList.remove('animationOn')
+        }
       }, 20000);
     }
   }, [animatingContainer])
@@ -27,7 +29,7 @@ const TopRatedSlider = () => {
 
         <div className={cls.slidingText}>
 
-          <div className={`${cls.internalWrapper} ${cls.animationOn} ${cls[i18n.language]}`} ref={animatingContainer}>
+          <div className={`${cls.internalWrapper} ${cls.animationOn} animationOn ${cls[i18n.language]}`} ref={animatingContainer}>
 
             <p>Dell Vostro 3500 laptop - 11th Intel core</p>
             <p>Dell Vostro 3500 laptop - 11th Intel core</p>
