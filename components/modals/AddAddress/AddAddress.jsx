@@ -31,27 +31,27 @@ const AddAddress = ({ setOpenNewAddress, addressDataToEdit }) => {
   }
 
   const addAddress = async() => {
-    const addressData = { type, city, street, country, zipCode }
+    // const addressData = { type, city, street, country, zipCode }
 
-    if (countries.map(c => c.text).indexOf(country) === -1) return errorNotify("Error, country is not valid");
+    // if (countries.map(c => c.text).indexOf(country) === -1) return errorNotify("Error, country is not valid");
 
-    if (countries.find(c => c.text === country).cities.indexOf(city) === -1) return errorNotify("Error, city is not valid");
+    // if (countries.find(c => c.text === country).cities.indexOf(city) === -1) return errorNotify("Error, city is not valid");
 
-    if(type && city && street && country && zipCode) {
+    // if(type && city && street && country && zipCode) {
 
-      const res = await axios.post(`/user/${_id}/address`, {address: addressData}).catch(err => errorNotify(err?.response?.data?.err))
+    //   const res = await axios.post(`/user/${_id}/address`, {address: addressData}).catch(err => errorNotify(err?.response?.data?.err))
   
-      if(!res) return;
+    //   if(!res) return;
   
-      dispatch(userActions.updateUser({addresses: res.data.success}))
+    //   dispatch(userActions.updateUser({addresses: res.data.success}))
 
-      successNotify(t('addNAddress'))
+    //   successNotify(t('addNAddress'))
   
-      setOpenNewAddress(false);
+    //   setOpenNewAddress(false);
 
-    } else {
-      errorNotify(t('fillError'))
-    }
+    // } else {
+    //   errorNotify(t('fillError'))
+    // }
   }
 
   const editAddress = async(addressId) => {
