@@ -17,12 +17,6 @@ const CurrencySwitch = () => {
     setHasMounted(true);
   }, []);
 
-  // const CurrencySwitch = (currency) => {
-  //   i18n.changeLanguage(lang);
-  //   cookie.set("grids-apps-shop-lang", currency, { path: "/" });
-
-  // };
-
   const menu = [
     {
       text: "USD",
