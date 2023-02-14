@@ -15,7 +15,7 @@ const Header = () => {
       <div className={cls.header_wrapper}>
 
         <Container maxWidth="xxl">
-          <Carousel className={`${cls.header__slider} header__slider`} autoPlay={true} infiniteLoop={true} showArrows={false} swipeable={true} showStatus={false} interval={5000}>
+          <Carousel className={`${cls.header__slider} header__slider`} autoPlay={true} infiniteLoop={true} showArrows={false} swipeable={true} showStatus={false} interval={5000} showThumbs={false}>
               <div className={`${cls.slide} slide`}>
 
                 <Grid container alignItems="center" spacing={5}>

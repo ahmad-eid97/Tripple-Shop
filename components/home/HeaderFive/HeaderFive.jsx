@@ -270,7 +270,7 @@ const Header = () => {
 
             <Grid item xs={12} lg={9}>
 
-              <Carousel className={`${cls.header__slider} header__slider`} autoPlay={true} infiniteLoop={true} showArrows={false} swipeable={true} showStatus={false} interval={5000}>
+              <Carousel className={`${cls.header__slider} header__slider`} autoPlay={true} infiniteLoop={true} showArrows={false} swipeable={true} showStatus={false} interval={5000} showThumbs={false}>
                 <div className={`${cls.slide} slide`}>
                   <Grid container alignItems="center" spacing={5}>
                     <Grid item xs={12} md={6}>
