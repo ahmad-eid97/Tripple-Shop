@@ -1,4 +1,4 @@
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 
 const AnimatedIcons = ({ animationData }) => {
   // DEFAUL OPTIONS FOR ANIMATED ICONS
@@ -10,7 +10,7 @@ const AnimatedIcons = ({ animationData }) => {
 
   return (
     <div>
-      <Lottie options={defaultOptions} />
+      {/* <Lottie options={defaultOptions} /> */}
     </div>
   );
 };
