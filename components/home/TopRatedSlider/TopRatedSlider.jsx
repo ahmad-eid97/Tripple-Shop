@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 
 import { useTranslation } from 'next-i18next';
 
-import cls from './topRatedSlider.module.scss';
+import cls from './topRatedSlider.module.scss'; 
 
 const TopRatedSlider = () => {
   const animatingContainer = useRef();
