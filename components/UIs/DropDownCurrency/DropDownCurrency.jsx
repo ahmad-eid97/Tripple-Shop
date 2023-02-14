@@ -15,11 +15,11 @@ const cookie = new Cookies();
 
 const DropDown = ({ menu }) => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [currency, setCurrency] = useState(cookie.get("grids-apps-shop-currency") || 'USD');
+  const [currency, setCurrency] = useState(cookie.get("grids-apps-currency") || 'USD');
 
   useEffect(() => {
-    setCurrency(cookie.get("grids-apps-shop-currency"));
-  }, [cookie.get("grids-apps-shop-currency")]);
+    // setCurrency(cookie.get("grids-apps-currency"));
+  }, [cookie.get("grids-apps-currency")]);
 
   const handleClick = () => {
     setOpenMenu(!openMenu);
@@ -45,7 +45,7 @@ const DropDown = ({ menu }) => {
             <li
               key={idx}
               onClick={() => {
-                item.method(item.text);
+                setCurrency(item.text);
                 handleClose();
               }}
             >
