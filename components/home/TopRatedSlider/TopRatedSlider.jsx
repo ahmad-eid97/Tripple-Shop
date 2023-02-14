@@ -8,7 +8,7 @@ import cls from './topRatedSlider.module.scss';
 
 const TopRatedSlider = () => {
   const animatingContainer = useRef();
-  const { t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation() 
 
   useEffect(() => {
     if (animatingContainer.current) {
