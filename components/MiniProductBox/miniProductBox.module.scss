@@ -23,18 +23,31 @@
     align-items: flex-end;
     max-width: 60px;
     position: absolute;
-    top: 3px;
+    top: 0px;
     right: 3px;
     .newBadge {
       background-color: var(--main-color);
       padding: 2px 8px;
       color: #fff;
-      border-radius: 0 10px;
       margin-bottom: 3px;
       span {
         font-size: 0.8rem;
         i {
           font-size: 1rem;
+        }
+      }
+      &.rounded {
+        border-radius: 10px;
+      }
+      &.halfRounded {
+        border-radius: 0 10px;
+      }
+      &.almostRounded {
+        border-radius: 10px 10px 0 10px;
+      }
+      &.ar {
+        &.almostRounded {
+          border-radius: 10px 10px 10px 0;
         }
       }
     }
@@ -73,8 +86,12 @@
       width: 55px;
       height: 55px;
       border-radius: 50%;
-      p {
         background-color: var(--success);
+      p {
+        background-color: transparent;
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 1.2rem;
       }
     }
     .hot {
@@ -130,7 +147,7 @@
   .title {
     font-size: 1rem;
     cursor: pointer;
-    width: 90%;
+    width: 85%;
     &:hover {
       color: var(--main-color);
     }

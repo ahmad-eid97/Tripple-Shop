@@ -16,12 +16,12 @@ const ProductBox = () => {
     <div className={cls.productBox}>
 
       <div className={[cls.badgesArea, cls[i18n.language]].join(" ")}>
-        <div className={`${cls.newBadge} ${cls[i18n.language]}`}>
-          <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
-        </div>
         <div className={`${cls.saleBadge} ${cls[i18n.language]}`}>
           <span>{t('product.off')}</span>
           <p>10%</p>
+        </div>
+        <div className={`${cls.newBadge} ${cls.almostRounded} ${cls[i18n.language]}`}>
+          <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
         </div>
         <div className={`${cls.special} ${cls[i18n.language]}`}>
           <span>Offer</span>
@@ -40,10 +40,6 @@ const ProductBox = () => {
       <img src="/imgs/products/laptop.png" alt="productImage" />
 
       <div className={cls.cart}>
-
-        <p>$350</p>
-
-        
         <div>
           <Tooltip title={t('product.addToCompare')} placement="top">
             <i className="fa-light fa-code-compare"></i>
@@ -55,13 +51,11 @@ const ProductBox = () => {
             <i className="fa-regular fa-cart-plus"></i>
           </Tooltip>
         </div>
-
       </div>
 
       <div className={cls.rating}>
-
         <Rating name="read-only" value={4} readOnly />
-
+        <p>$350</p>
       </div>
 
       <div className={cls.points}>

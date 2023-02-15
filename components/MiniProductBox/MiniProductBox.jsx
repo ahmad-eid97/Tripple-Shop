@@ -15,12 +15,12 @@ const MiniProductBox = () => {
     <div className={cls.productBox}>
 
       <div className={[cls.badgesArea, cls[i18n.language]].join(" ")}>
-        <div className={`${cls.newBadge} ${cls[i18n.language]}`}>
-          <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
-        </div>
         <div className={`${cls.saleBadge} ${cls[i18n.language]}`}>
           <span>{t('product.off')}</span>
           <p>10%</p>
+        </div>
+        <div className={`${cls.newBadge} ${cls[i18n.language]}`}>
+          <span><i className="fa-regular fa-stars"></i> {t('product.new')}</span>
         </div>
         <div className={`${cls.special} ${cls[i18n.language]}`}>
           <span>Offer</span>
