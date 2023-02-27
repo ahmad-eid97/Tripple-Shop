@@ -12,6 +12,8 @@
       cursor: pointer;
       .bigImage {
         height: 75px;
+        object-fit: contain;
+        -webkit-object-fit: contain;
         @include md {
           display: none;
         }
@@ -80,6 +82,8 @@
         display: none;
         .smallImage {
           height: 50px;
+          object-fit: contain;
+          -webkit-object-fit: contain;
           @include md {
             display: inline-block;
           }

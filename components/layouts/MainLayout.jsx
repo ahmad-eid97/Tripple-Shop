@@ -6,8 +6,8 @@ import MobileBar from './../Navbar/MobileBar/MobileBar';
 const MainLayout = ({ children }) => {
   return (
     <>
-      {/* <Navbar /> */}
-      <NavbarTwo />
+      <Navbar />
+      {/* <NavbarTwo /> */}
         {children}
       <Footer />
       <MobileBar />

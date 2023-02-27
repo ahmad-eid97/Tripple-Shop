@@ -16,7 +16,7 @@ const ProductBox = () => {
     <div className={cls.productBox}>
 
       <div className={[cls.badgesArea, cls[i18n.language]].join(" ")}>
-        <div className={`${cls.saleBadge} ${cls[i18n.language]}`}>
+        <div className={`${cls.saleBadge} ${cls.horizontal} ${cls[i18n.language]}`}>
           <span>{t('product.off')}</span>
           <p>10%</p>
         </div>
