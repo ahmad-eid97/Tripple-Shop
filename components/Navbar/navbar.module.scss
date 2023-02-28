@@ -12,9 +12,10 @@
     .logo {
       cursor: pointer;
       .bigImage {
-        height: 75px;
+        height: 75px !important;
+        -webkit-height: 75px !important;
         object-fit: contain;
-        -webkit-object-fit: contain;
+        -webkit-object-fit: contain !important;
         @include md {
           display: none;
         }
@@ -74,8 +75,9 @@
         display: none;
         .smallImage {
           height: 50px;
+          -webkit-height: 50px;
           object-fit: contain;
-          -webkit-object-fit: contain;
+          -webkit-object-fit: contain !important;
           @include md {
             display: inline-block;
           }

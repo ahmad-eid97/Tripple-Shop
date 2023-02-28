@@ -27,15 +27,15 @@
     .newBadge {
       background-color: var(--main-color);
       padding: 2px 8px;
-      -webkit-padding: 2px 8px;
+      -webkit-padding: 2px 8px !important;
       color: #fff;
       margin-bottom: 3px;
       span {
         font-size: 0.8rem;
-        -webkit-font-size: 0.8rem;
+        -webkit-font-size: 0.8rem !important;
         i {
           font-size: 1rem;
-          -webkit-font-size: 1rem;
+          -webkit-font-size: 1rem !important;
         }
       }
       &.rounded {
@@ -171,7 +171,7 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-      -webkit-gap: 20px;
+      -webkit-gap: 20px !important;
     }
 
     i {
